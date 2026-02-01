@@ -9,6 +9,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using JukeboxComponent = Content.Shared.Audio.Jukebox.JukeboxComponent;
+using Content.Server.Instruments; // Ratgore change
 
 namespace Content.Server.Audio.Jukebox;
 
@@ -59,6 +60,13 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
             component.AudioStream = Audio.PlayPvs(jukeboxProto.Path, uid, AudioParams.Default.WithMaxDistance(10f))?.Entity;
             Dirty(uid, component);
         }
+
+        // Ratgore start
+        if (!HasComp<ActiveInstrumentComponent>(uid))
+        {
+            AddComp<ActiveInstrumentComponent>(uid);
+        }
+        // Ratgore end
     }
 
     private void OnJukeboxPause(Entity<JukeboxComponent> ent, ref JukeboxPauseMessage args)
@@ -88,6 +96,8 @@ public sealed class JukeboxSystem : SharedJukeboxSystem
     private void OnJukeboxStop(Entity<JukeboxComponent> entity, ref JukeboxStopMessage args)
     {
         Stop(entity);
+
+        RemComp<ActiveInstrumentComponent>(entity); // Ratgore change
     }
 
     private void Stop(Entity<JukeboxComponent> entity)
