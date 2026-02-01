@@ -17,7 +17,7 @@
   - type: SpentAmmoVisuals
   - type: Appearance
   - type: StaticPrice
-    price: 1
+    price: 0
 
 - type: entity
   id: CartridgeCap
