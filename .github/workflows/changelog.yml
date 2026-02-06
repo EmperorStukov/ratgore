@@ -7,7 +7,7 @@ on:
 # Global environment variables
 env:
   # Hardcode the changelog path to avoid variable issues
-  CHANGELOG_DIR: Resources/Changelog/rat.yml
+  CHANGELOG_DIR: ${{ github.workspace }}/Resources/Changelog/rat.yml
   # PR number from GitHub event
   PR_NUMBER: ${{ github.event.number }}
   # Repository name (for API calls)
@@ -37,15 +37,11 @@ jobs:
         echo "Changelog Dir: ${{ env.CHANGELOG_DIR }}"
         echo "GitHub Actor: ${{ github.actor }}"
         echo "GitHub Ref: ${{ github.ref }}"
-        echo "=== SECRETS CHECK ==="
-        echo "GITHUB_TOKEN exists: ${{ secrets.GITHUB_TOKEN != '' }}"
-        echo "GH_PAT exists: ${{ secrets.GH_PAT != '' }}"
-        echo "BOT_TOKEN exists: ${{ secrets.BOT_TOKEN != '' }}"
         echo "=== END DEBUG ==="
 
     # ========== STEP 2: CHECKOUT CODE ==========
     - name: Checkout Master Branch
-      uses: actions/checkout@v3
+      uses: actions/checkout@v6
       with:
         # Use built-in GitHub token (automatically provided)
         token: ${{ secrets.GH_PAT }}
@@ -110,7 +106,7 @@ jobs:
 
     # ========== STEP 5: SETUP NODE ==========
     - name: Setup Node.js Environment
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 18.x
 
@@ -145,21 +141,17 @@ jobs:
       run: |
         echo "=== GENERATING CHANGELOG ==="
         echo "Environment variables for changelog script:"
-        echo "GH_PAT: ${GH_PAT:0:10}... (first 10 chars)"
         echo "CHANGELOG_DIR: $CHANGELOG_DIR"
         echo "PR_NUMBER: $PR_NUMBER"
         echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
         echo ""
 
         echo "Current directory: $(pwd)"
-        echo "Changing to Tools/changelogs directory"
-        cd Tools/changelogs
-
         echo "Running changelog.js script..."
         echo "================================"
 
         # Run the script with full output
-        node changelog.js
+        node Tools/changelogs/changelog.js
 
         echo "================================"
         echo "Changelog script completed"
@@ -167,7 +159,6 @@ jobs:
         # Verify the changelog was updated
         echo ""
         echo "Checking if changelog was updated..."
-        cd ../..  # Back to root
 
         if [ -f "$CHANGELOG_DIR" ]; then
           echo "Changelog file exists. Last 5 entries:"
@@ -217,15 +208,13 @@ jobs:
         git add "${{ env.CHANGELOG_DIR }}"
 
         echo "Committing changes..."
-        git commit -m "📝 Update changelog (#${{ env.PR_NUMBER }})" || echo "Commit failed or no changes to commit"
-
-        # Show what we're about to push
-        echo "Git log last 3 commits:"
-        git log --oneline -3
-
-        # Push changes
-        echo "Pushing to master..."
-        git push origin master
+        if ! git diff --cached --quiet; then
+          git commit -m "📝 Update changelog (#${{ env.PR_NUMBER }})"
+          echo "Pushing to master..."
+          git push origin master
+        else
+          echo "No changes to commit."
+        fi
 
         echo "=== CHANGELOG COMMITTED SUCCESSFULLY ==="
 
