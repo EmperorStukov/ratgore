@@ -1,28 +1,11 @@
 ﻿- type: spaceBiome
-  id: RatGliessSantoExclusionZone
-  priority: 10000
-  minX: -5
-  maxX: 5
-  minY: -5
-  maxY: 5
+  id: RatGraveyardMin
+  priority: 1000
+  distanceRange: 2500, 6000
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
-    densityNoiseChannel: DensityGraveyard
-    densityClip: false
-    randomCancelChance: 1.0
-
-- type: spaceBiome
-  id: RatGraveyardWrecks
-  priority: 9000
-  minX: 39
-  maxX: 53
-  minY: -29
-  maxY: -19
-  noiseRanges: {}
-  chunkComponents:
-  - type: DebrisFeaturePlacerController
-    densityNoiseChannel: DensityGraveyard
+    densityNoiseChannel: RatDensityMin
   - type: NoiseDrivenDebrisSelector
     noiseChannel: WreckGraveyard
     debrisTable:
@@ -88,20 +71,17 @@
       prob: 1
   - type: NoiseRangeCarver
     ranges:
-    - 0.4, 0.6
-    noiseChannel: Carver
+    - 0.27, 0.8
+    noiseChannel: RatCarver
 
 - type: spaceBiome
-  id: RatBalreskaWrecks
-  priority: 9000
-  minX: -34
-  maxX: -26
-  minY: -44
-  maxY: -36
+  id: RatGraveyardMax
+  priority: 1000
+  distanceRange: 0, 2500
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
-    densityNoiseChannel: DensityGraveyard
+    densityNoiseChannel: RatDensityMin
   - type: NoiseDrivenDebrisSelector
     noiseChannel: WreckGraveyard
     debrisTable:
@@ -167,237 +147,55 @@
       prob: 1
   - type: NoiseRangeCarver
     ranges:
-    - 0.4, 0.6
-    noiseChannel: Carver
+    - 0.3, 0.8
+    noiseChannel: RatCarver
 
 - type: spaceBiome
-  id: RatAncientBattlefieldWrecks
-  priority: 9000
-  minX: 18
-  maxX: 21
-  minY: 21
-  maxY: 26
+  id: RatBiomeBase
+  abstract: true
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
-    densityNoiseChannel: DensityGraveyard
-  - type: NoiseDrivenDebrisSelector
-    noiseChannel: WreckGraveyard
-    debrisTable:
-    - id: GargutWreckFull
-      prob: 1
-    - id: TriumWreck1
-      prob: 1
-    - id: TriumWreck2
-      prob: 1
-    - id: SuzWreck1
-      prob: 1
-    - id: SuzWreck2
-      prob: 1
-    - id: SuzWreck3
-      prob: 1
-    - id: NemWreck1
-      prob: 1
-    - id: NemWreck2
-      prob: 1
-    - id: IvarWreck1
-      prob: 1
-    - id: ClemWreck1
-      prob: 1
-    - id: ClemWreck2
-      prob: 1
-    - id: ClemWreck3
-      prob: 1
-    - id: ExhumerGag
-      prob: 1
-    - id: GazWreck1
-      prob: 1
-    - id: GazWreck2
-      prob: 1
-    - id: HamWreck1
-      prob: 1
-    - id: HindWreck1
-      prob: 1
-    - id: LodkWreck
-      prob: 1
-    - id: PraxWreck1
-      prob: 1
-    - id: QianWreck1
-      prob: 1
-    - id: SternWreck1
-      prob: 1
-    - id: WereGood
-      prob: 1
-    - id: MoloWreck1
-      prob: 1
-    - id: MusiWreck1
-      prob: 1
-    - id: RadAtee
-      prob: 0.1
-    - id: CorvWreck1
-      prob: 1
-    - id: CocWreck1
-      prob: 1
+    densityNoiseChannel: RatDensityMax
+
+- type: spaceBiome
+  id: RatAsteroidsStandardTaypan
+  parent: RatBiomeBase
+  priority: 9000
+  distanceRange: 4000, 4300
+  chunkComponents:
+  - type: DebrisFeaturePlacerController
+    densityNoiseChannel: RatDensityMin
   - type: NoiseRangeCarver
     ranges:
-    - 0.4, 0.6
-    noiseChannel: Carver
-
-- type: spaceBiome
-  id: RatHeartlandsWrecks
-  priority: 9000
-  minX: -32
-  maxX: -24
-  minY: -14
-  maxY: -6
-  noiseRanges: {}
-  chunkComponents:
-  - type: DebrisFeaturePlacerController
-    densityNoiseChannel: DensityGraveyard
-  - type: NoiseDrivenDebrisSelector
-    noiseChannel: WreckGraveyard
-    debrisTable:
-    - id: ScrapDebrisLarge
-      prob: 1
-    - id: GargutWreckFull
-      prob: 1
-    - id: TriumWreck1
-      prob: 1
-    - id: TriumWreck2
-      prob: 1
-    - id: SuzWreck1
-      prob: 1
-    - id: SuzWreck2
-      prob: 1
-    - id: SuzWreck3
-      prob: 1
-    - id: NemWreck1
-      prob: 1
-    - id: NemWreck2
-      prob: 1
-    - id: IvarWreck1
-      prob: 1
-    - id: ClemWreck1
-      prob: 1
-    - id: ClemWreck2
-      prob: 1
-    - id: ClemWreck3
-      prob: 1
-    - id: ExhumerGag
-      prob: 1
-    - id: GazWreck1
-      prob: 1
-    - id: GazWreck2
-      prob: 1
-    - id: HamWreck1
-      prob: 1
-    - id: HindWreck1
-      prob: 1
-    - id: LodkWreck
-      prob: 1
-    - id: PraxWreck1
-      prob: 1
-    - id: QianWreck1
-      prob: 1
-    - id: SternWreck1
-      prob: 1
-    - id: WereGood
-      prob: 1
-    - id: MoloWreck1
-      prob: 1
-    - id: MusiWreck1
-      prob: 1
-    - id: RadAtee
-      prob: 0.1
-    - id: CorvWreck1
-      prob: 1
-    - id: CocWreck1
-      prob: 1
-  - type: NoiseRangeCarver
-    ranges:
-    - 0.4, 0.6
-    noiseChannel: Carver
-
-- type: spaceBiome
-  id: RatAsteroidsStandardTaypanOne
-  priority: 9000
-  minX: -11
-  maxX: -5
-  minY: -26
-  maxY: -20
-  noiseRanges: {}
-  chunkComponents:
-  - type: DebrisFeaturePlacerController
-    densityNoiseChannel: Density
+    - 0.4, 0.7
+    noiseChannel: RatCarver
   - type: SimpleDebrisSelector
     debrisTable:
     - id: RatAsteroidPoorLarge
-      prob: 0.25
+      prob: 0.5
     - id: RatAsteroidPoorHuge
-      prob: 0.15
-    - id: RatIceAsteroidPoorLarge
-      prob: 0.2
-    - id: RatIceAsteroidPoorHuge
+      prob: 0.5
+    - id: RatAsteroidRichLarge
       prob: 0.1
-    - id: RatBasaltAsteroidPoorLarge
-      prob: 0.2
-    - id: RatBasaltAsteroidPoorHuge
+    - id: RatAsteroidRichHuge
       prob: 0.1
-    - id: ExhumerGag
-      prob: 0.01
-
-- type: spaceBiome
-  id: RatAsteroidsStandardTaypanTwo
-  priority: 9000
-  minX: -18
-  maxX: -12
-  minY: 19
-  maxY: 25
-  noiseRanges: {}
-  chunkComponents:
-  - type: DebrisFeaturePlacerController
-    densityNoiseChannel: Density
-  - type: SimpleDebrisSelector
-    debrisTable:
-    - id: RatAsteroidPoorLarge
-      prob: 0.25
-    - id: RatAsteroidPoorHuge
-      prob: 0.15
-    - id: RatIceAsteroidPoorLarge
-      prob: 0.2
-    - id: RatIceAsteroidPoorHuge
-      prob: 0.1
-    - id: RatBasaltAsteroidPoorLarge
-      prob: 0.2
-    - id: RatBasaltAsteroidPoorHuge
-      prob: 0.1
-    - id: ExhumerGag
-      prob: 0.01
 
 - type: spaceBiome
   id: RatCraster
-  priority: 9000
-  minX: 19
-  maxX: 26
-  minY: -9
-  maxY: 0
-  noiseRanges: {}
+  parent: RatBiomeBase
+  priority: 9001
+  distanceRange: 0, 600
   chunkComponents:
   - type: DebrisFeaturePlacerController
-    densityNoiseChannel: Density
+    densityNoiseChannel: RatDensityMax
   - type: SimpleDebrisSelector
     debrisTable:
     - id: RatAsteroidRichLarge
-      prob: 0.3
+      prob: 0.5
     - id: RatAsteroidRichHuge
-      prob: 0.2
-    - id: RatIceAsteroidRichLarge
-      prob: 0.15
-    - id: RatIceAsteroidRichHuge
+      prob: 0.5
+    - id: RatAsteroidPoorLarge
       prob: 0.1
-    - id: RatBasaltAsteroidRichLarge
-      prob: 0.15
-    - id: RatBasaltAsteroidRichHuge
+    - id: RatAsteroidPoorHuge
       prob: 0.1
-    - id: ExhumerGag
-      prob: 0.01
