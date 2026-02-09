@@ -8,6 +8,7 @@ job-supervisors-ncwl-mvd = To the Chengridz Central Committee and by extension t
 job-supervisors-ncsp = NCSP High Command
 job-supervisors-imperial = House Kircheis
 job-supervisors-shi = Shinohara Corporate Command
+job-supervisors-pf = Corporate Command, then your assigned commander for the operation.
 job-supervisors-prophet = The Mother's Will
 job-supervisors-tap = Nomadic Law
 job-supervisors-gliess = Gliessian Dockmaster

@@ -1,5 +1,5 @@
 - type: gameMap
-  id: Planetfall
+  id: PlanetfallMap
   mapName: 'NT Isolated Pressurized Warfare Simulation Research Outpost'
   mapPath: /Maps/_Crescent/Stations/tatsumoto.yml
   minPlayers: 0
@@ -28,9 +28,9 @@
         - type: StationJobs
           overflowJobs: []
           availableJobs:
-            #PlanetfallTeam1Leader: [ 1, 1 ]
-            #PlanetfallTeam1SubLeader: [ 1, 1 ]
-            #PlanetfallTeam1Member: [ 100, 100 ]
-            #PlanetfallTeam2Leader: [ 1, 1 ]
-            #PlanetfallTeam2SubLeader: [ 1, 1 ]
-            #PlanetfallTeam2Member: [ 100, 100 ]
+            PlanetfallTeam1Leader: [ 1, 1 ]
+            PlanetfallTeam1SubLeader: [ 1, 1 ]
+            PlanetfallTeam1Member: [ 100, 100 ]
+            PlanetfallTeam2Leader: [ 1, 1 ]
+            PlanetfallTeam2SubLeader: [ 1, 1 ]
+            PlanetfallTeam2Member: [ 100, 100 ]

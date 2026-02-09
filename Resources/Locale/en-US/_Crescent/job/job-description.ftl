@@ -164,3 +164,9 @@ job-description-unionfall-dsm-officer = Lead small squads. Ensure cohesion. List
 job-description-unionfall-dsm-doctor = Keep your fellow men alive.
 job-description-unionfall-dsm-rifleman = Be the rank and file. Pilot fighters and ultralights. Listen to your superiors.
 job-description-unionfall-dsm-cadet = Listen to your superiors. Keep your head down and learn.
+
+# planetfall
+job-description-planetfall-team-subleader = Enact the team leader's orders. Ensure Cohesion.
+job-description-planetfall-team-member = Follow orders from your team leader. Do your part to ensure the success of the mission. Listen to your superiors.
+job-description-planetfall-team-leader = Lead your team. Ensure the success of your mission. Listen to your superiors.
+
