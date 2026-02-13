@@ -8,15 +8,15 @@
     Шаттл собранный из разрушенных "Термитов". Создана для интенсивных горных работ.
     LOADOUT: 2x 250c Exhumer mining guns
     MINIMUM CREW: 1x Pilot
-  price: 19000
+  price: 40000
   category: Small
   group: None
-  path: /Maps/_Crescent/Shuttles/NCSP/rockchipper.yml
+  path: /Maps/_Rat/Shuttles/Civilian/exhumer.yml
 
 - type: gameMap
   id: Rockchipper
   mapName: 'ПК Кабитель'
-  mapPath: /Maps/_Crescent/Shuttles/NCSP/rockchipper.yml
+  mapPath: /Maps/_Rat/Shuttles/Civilian/exhumer.yml
   minPlayers: 0
   stations:
     Rockchipper:
