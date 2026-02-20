@@ -25,7 +25,7 @@
       entries:
         FloorAsteroidSand:
           - id: WallRock
-            prob: 0.70
+            prob: 0.85
             orGroup: rock
           - id: WallRockCoal
             prob: 0.05
@@ -77,7 +77,7 @@
       entries:
         FloorAsteroidSand:
           - id: WallRock
-            prob: 0.35
+            prob: 0.4
             orGroup: rock
           - id: WallRockCoal
             prob: 0.075
