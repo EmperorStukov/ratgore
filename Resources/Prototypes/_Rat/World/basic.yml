@@ -1,4 +1,9 @@
 ﻿- type: spaceBiome
+  id: RatStandard
+  priority: 0 
+  noiseRanges: {}
+
+- type: spaceBiome
   id: RatGraveyardMin1
   priority: 1000
   distanceRange: 2500, 4000

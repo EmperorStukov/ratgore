@@ -4,6 +4,7 @@
   - type: WorldController
   - type: BiomeSelection
     biomes:
+    - RatStandard
     - RatCraster
     - RatAsteroidsStandardTaypan
     - RatGraveyardMax
