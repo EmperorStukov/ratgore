@@ -41,9 +41,9 @@
 #      - ClothingOuterHardsuitMetrocop
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: CombineSuit
+      collection: MetrocopSuit
       params:
-        volume: -5
+        volume: -7 # dawg this shit loud and i cant be bothered to make it quieter
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
