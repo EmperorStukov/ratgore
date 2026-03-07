@@ -16,6 +16,7 @@
   - ClothingOuterShinoharaLabcoat
   - ClothingUniformJumpsuitShinoharaDoctor
   - ClothingOuterHardsuitHEV
+  - ClothingOuterHardsuitMetrocop
 
 - type: technology
   id: ShinoharaDisposableLauncher
