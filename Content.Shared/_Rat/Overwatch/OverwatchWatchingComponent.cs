@@ -13,4 +13,10 @@ public sealed partial class RatOverwatchWatchingComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public EntityUid? Watching;
+
+    /// <summary>
+    /// Сущность консоли Overwatch, которая управляет этим наблюдением.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public EntityUid? Console;
 }

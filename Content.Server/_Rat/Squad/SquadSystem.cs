@@ -10,8 +10,6 @@ namespace Content.Server._Rat.Squad;
 /// </summary>
 public sealed class SquadSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _config = default!;
-
     // Храним список всех отрядов по фракциям: Faction -> (SquadId -> SquadInfo)
     private readonly Dictionary<string, Dictionary<int, SquadInfo>> _squadsByFaction = new();
     private int _nextSquadId = 1;
@@ -32,9 +30,6 @@ public sealed class SquadSystem : EntitySystem
         }
 
         var squadId = _nextSquadId++;
-
-        if (_squadsByFaction[faction].ContainsKey(squadId))
-            return false;
 
         _squadsByFaction[faction][squadId] = new SquadInfo(squadId, squadName);
         return true;
@@ -66,18 +61,18 @@ public sealed class SquadSystem : EntitySystem
     /// <summary>
     /// Назначить сущность в отряд.
     /// </summary>
-    public bool AssignToSquad(EntityUid entity, int squadId)
+    public bool AssignToSquad(EntityUid entity, int squadId, string faction)
     {
-        foreach (var factionSquads in _squadsByFaction.Values)
+        if (!_squadsByFaction.TryGetValue(faction, out var factionSquads))
+            return false;
+
+        if (factionSquads.TryGetValue(squadId, out var squadInfo))
         {
-            if (factionSquads.ContainsKey(squadId))
-            {
-                var squadComp = EnsureComp<SquadComponent>(entity);
-                squadComp.SquadId = squadId;
-                squadComp.SquadName = factionSquads[squadId].Name;
-                Dirty(entity, squadComp, MetaData(entity));
-                return true;
-            }
+            var squadComp = EnsureComp<SquadComponent>(entity);
+            squadComp.SquadId = squadId;
+            squadComp.SquadName = squadInfo.Name;
+            Dirty(entity, squadComp, MetaData(entity));
+            return true;
         }
 
         return false;
@@ -99,7 +94,7 @@ public sealed class SquadSystem : EntitySystem
         if (!_squadsByFaction.ContainsKey(faction))
             return new Dictionary<int, SquadInfo>();
 
-        return _squadsByFaction[faction];
+        return new Dictionary<int, SquadInfo>(_squadsByFaction[faction]);
     }
 
     /// <summary>

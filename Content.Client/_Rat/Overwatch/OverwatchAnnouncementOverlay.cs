@@ -20,28 +20,28 @@ public sealed class OverwatchAnnouncementOverlay : Overlay
     private const float MessageAnimationDuration = 2.5f;
     private const float AnnouncementDisplayDuration = 5f;
 
-    [Dependency] private readonly IResourceCache _cache = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    private readonly IResourceCache _cache;
+    private readonly IGameTiming _timing;
 
     public override OverlaySpace Space => OverlaySpace.ScreenSpace;
 
     private Font _titleFont = default!;
     private Font _messageFont = default!;
 
-    public string? Title;
-    public int TitleIndex;
-    public bool TitleReverse;
-    public Vector2 TitlePosition;
-    public TimeSpan TitleCharInterval;
-    public Color TitleColor;
+    private string? Title;
+    private int TitleIndex;
+    private bool TitleReverse;
+    private Vector2 TitlePosition;
+    private TimeSpan TitleCharInterval;
+    private Color TitleColor;
     private TimeSpan _nextUpdTitle;
 
-    public string? Text;
-    public int Index;
-    public bool Reverse;
-    public Vector2 Position;
-    public TimeSpan CharInterval;
-    public Color TextColor;
+    private string? Text;
+    private int Index;
+    private bool Reverse;
+    private Vector2 Position;
+    private TimeSpan CharInterval;
+    private Color TextColor;
     private TimeSpan _nextUpd;
 
     public OverwatchAnnouncementOverlay(IResourceCache cache, IGameTiming timing)

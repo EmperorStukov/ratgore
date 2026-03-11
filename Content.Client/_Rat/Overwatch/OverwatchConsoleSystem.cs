@@ -51,6 +51,8 @@ public sealed class OverwatchConsoleSystem : EntitySystem
 
         SubscribeLocalEvent<RatOverwatchRelayedSoundComponent, ComponentRemove>(OnRelayedRemove);
         SubscribeLocalEvent<RatOverwatchRelayedSoundComponent, EntityTerminatingEvent>(OnRelayedRemove);
+        SubscribeLocalEvent<RatOverwatchWatchingComponent, ComponentInit>(OnLocalWatchingInit);
+        SubscribeLocalEvent<RatOverwatchWatchingComponent, ComponentRemove>(OnLocalWatchingRemoved);
 
         _announcementOverlay = new(_cache, _timing);
         _overlay.AddOverlay(_announcementOverlay);
@@ -71,6 +73,23 @@ public sealed class OverwatchConsoleSystem : EntitySystem
             ("overwatchTitle", ev.OverwatchTitle),
             ("targetName", ev.TargetName));
         _announcementOverlay.SetText(title, ev.Message, ev.Color);
+    }
+
+    private void OnLocalWatchingInit(Entity<RatOverwatchWatchingComponent> ent, ref ComponentInit args)
+    {
+        if (_player.LocalEntity != ent.Owner || !ent.Comp.Watching.HasValue)
+            return;
+
+        var watchingNet = GetNetEntity(ent.Comp.Watching.Value);
+        _announcementOverlay?.Reset();
+    }
+
+    private void OnLocalWatchingRemoved(Entity<RatOverwatchWatchingComponent> ent, ref ComponentRemove args)
+    {
+        if (_player.LocalEntity != ent.Owner || !ent.Comp.Watching.HasValue)
+            return;
+
+        var watchingNet = GetNetEntity(ent.Comp.Watching.Value);
     }
 
     /// <summary>

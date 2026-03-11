@@ -39,6 +39,7 @@ public sealed partial class OverwatchWindow : FancyWindow
 
     private bool _anyDropdownOpen;
     private bool _justOpenedSquadSelect;
+    private OverwatchUpdateState? _pendingState;
 
     private OverwatchMemberStatus? _statusFilter;
     private int? _squadFilterId;
@@ -86,14 +87,9 @@ public sealed partial class OverwatchWindow : FancyWindow
 
         StatusFilter.OnItemSelected += args =>
         {
-            _statusFilter = args.Id switch
-            {
-                0 => null,
-                1 => OverwatchMemberStatus.Alive,
-                2 => OverwatchMemberStatus.SSD,
-                3 => OverwatchMemberStatus.Dead,
-                _ => null
-            };
+            _statusFilter = args.Id == SquadFilterAllId
+            ? null
+            : (OverwatchMemberStatus)(args.Id - 1);
             StatusFilter.SelectId(args.Id);
             ApplyFilters();
         };
@@ -146,9 +142,6 @@ public sealed partial class OverwatchWindow : FancyWindow
     /// <param name="state">Состояние от сервера.</param>
     public void UpdateState(OverwatchUpdateState state)
     {
-        if (_anyDropdownOpen)
-            return;
-
         if (_ui == null)
             return;
 
@@ -159,21 +152,30 @@ public sealed partial class OverwatchWindow : FancyWindow
                             state.AvailableSquads.Any(kvp =>
                                 !_availableSquads.ContainsKey(kvp.Key) ||
                                 _availableSquads[kvp.Key] != kvp.Value);
-
         _availableSquads = state.AvailableSquads;
 
+        if (_anyDropdownOpen)
+        {
+            _pendingState = state;
+            return;
+        }
+
+        _pendingState = null;
+        ApplyStateToUi(squadsChanged);
+    }
+
+    private void ApplyStateToUi(bool squadsChanged)
+    {
         AdminPanel.Visible = true;
 
         if (squadsChanged)
-        {
-            UpdateSquadFilter(state.AvailableSquads);
-        }
+            UpdateSquadFilter(_availableSquads);
 
-        UpdateSquadsList(state.AvailableSquads);
+        UpdateSquadsList(_availableSquads);
         ApplyFilters();
         StopWatchingButton.Visible = _memberRows.Values.Any(r => r.IsWatching);
     }
-    
+
     /// <summary>
     /// Закрывает все открытые селекторы отрядов.
     /// </summary>
@@ -192,6 +194,13 @@ public sealed partial class OverwatchWindow : FancyWindow
         if (anyWasOpen)
         {
             _anyDropdownOpen = false;
+
+            if (_pendingState != null)
+            {
+                var pending = _pendingState;
+                _pendingState = null;
+                UpdateState(pending);
+            }
         }
     }
 
@@ -583,8 +592,6 @@ public sealed class OverwatchMemberRow : BoxContainer
 
             _onStartWatching(this);
             _ui.ViewCamera(_member);
-            IsWatching = true;
-            UpdateButtonState();
         };
 
         _squadButton.OnPressed += _ =>
@@ -596,15 +603,11 @@ public sealed class OverwatchMemberRow : BoxContainer
             _window?.SetJustOpenedSquadSelect();
         };
 
-        _squadSelect.OnItemSelected += _ =>
+        _squadSelect.OnItemSelected += args =>
         {
             _squadSelect.Visible = false;
             _squadButton.Visible = true;
             _onDropdownOpenChanged?.Invoke(false);
-        };
-
-        _squadSelect.OnItemSelected += args =>
-        {
             if (args.Id == -1)
             {
                 _ui?.RemoveSquadMember(_member);

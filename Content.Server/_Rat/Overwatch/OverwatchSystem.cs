@@ -332,7 +332,7 @@ public sealed class OverwatchSystem : EntitySystem
         if (player == null || !player.Valid)
             return;
 
-        if (_squadSystem.AssignToSquad(player, args.SquadId))
+        if (_squadSystem.AssignToSquad(player, args.SquadId, ent.Comp.Faction))
         {
             RefreshData(ent);
         }
@@ -463,6 +463,7 @@ public sealed class OverwatchSystem : EntitySystem
 
         var watchingCompActor = EnsureComp<RatOverwatchWatchingComponent>(actor);
         watchingCompActor.Watching = target;
+        watchingCompActor.Console = ent.Owner;
 
         _watchingPairs[actor] = target;
 
@@ -510,6 +511,7 @@ public sealed class OverwatchSystem : EntitySystem
         _eyeSystem.SetTarget(watcher, null);
         _watchingPairs.Remove(watcher);
         watchingComp.Watching = null;
+        watchingComp.Console = null;
     }
 
     /// <summary>
@@ -540,6 +542,7 @@ public sealed class OverwatchSystem : EntitySystem
 
         _eyeSystem.SetTarget(ent.Owner, null);
         _watchingPairs.Remove(ent.Owner);
+        ent.Comp.Console = null;
     }
 
     /// <summary>
@@ -566,13 +569,13 @@ public sealed class OverwatchSystem : EntitySystem
 
         foreach (var (watcher, target) in _watchingPairs.ToList())
         {
-            if (TryComp<RatOverwatchWatchingComponent>(watcher, out var watchingComp))
+            if (TryComp<RatOverwatchWatchingComponent>(watcher, out var watchingComp) &&
+                watchingComp.Console == ent.Owner)
             {
                 StopWatching(watcher, watchingComp);
             }
         }
 
-        _watchingPairs.Clear();
         _uiSystem.CloseUi(ent.Owner, OverwatchUiKey.Key);
     }
 
@@ -601,6 +604,7 @@ public sealed class OverwatchSystem : EntitySystem
             return;
 
         _updateTimer -= UpdateInterval;
+        _cacheInvalidationTimer += frameTime;
 
         if (_cacheInvalidationTimer >= CacheInvalidationInterval)
         {

@@ -22,6 +22,7 @@ public sealed record OverwatchMemberData(
 /// <summary>
 /// Статус члена фракции для отображения в консоли Overwatch.
 /// </summary>
+[Serializable, NetSerializable]
 public enum OverwatchMemberStatus : byte
 {
     Alive,

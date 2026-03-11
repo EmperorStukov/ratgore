@@ -48,7 +48,6 @@ overwatch-title-dsm = ОКО КАЙЗЕРА
 overwatch-title-ncwl = ДОЗОРНЫЙ
 overwatch-title-shi = C.A.S.S.I.E.
 overwatch-title-tap = ЗВЕЗДНЫЙ ШЁПОТ
-overwatch-title-tfsc = ЧЕРНАЯ СЕТЬ
 overwatch-title-ipm = ЧЕРНАЯ СЕТЬ
 overwatch-title-saw = ЧЕРНАЯ СЕТЬ
 overwatch-title-gsc = ЧЕРНАЯ СЕТЬ
