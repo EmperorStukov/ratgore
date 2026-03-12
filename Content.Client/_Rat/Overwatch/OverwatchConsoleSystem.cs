@@ -190,7 +190,8 @@ public sealed class OverwatchConsoleSystem : EntitySystem
         base.Update(frameTime);
 
         if (_player.LocalEntity is not { } player ||
-            !HasComp<RatOverwatchWatchingComponent>(player) ||
+            !TryComp(player, out RatOverwatchWatchingComponent? watching) ||
+            !watching.Watching.HasValue ||
             !TryComp(player, out TransformComponent? playerTransform))
         {
             CleanupAllRelayedSounds();

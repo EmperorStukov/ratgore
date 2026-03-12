@@ -164,7 +164,7 @@ public sealed class OverwatchAnnouncementOverlay : Overlay
         {
             TitleReverse = true;
             _nextUpdTitle += TimeSpan.FromSeconds(AnnouncementDisplayDuration);
-            TitleIndex++;
+            return;
         }
 
         if (TitleReverse && TitleIndex == 0)

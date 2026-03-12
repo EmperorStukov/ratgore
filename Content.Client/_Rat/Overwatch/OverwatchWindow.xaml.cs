@@ -108,8 +108,16 @@ public sealed partial class OverwatchWindow : FancyWindow
             ApplyFilters();
         };
 
-        SearchInput.OnTextEntered += _ => ApplyFilters();
-        SearchInput.OnTextChanged += _ => ApplyFilters();
+        SearchInput.OnTextEntered += _ =>
+        {
+            _searchQuery = SearchInput.Text.Trim();
+            ApplyFilters();
+        };
+        SearchInput.OnTextChanged += _ =>
+        {
+            _searchQuery = SearchInput.Text.Trim();
+            ApplyFilters();
+        };
     }
 
     /// <summary>
@@ -592,6 +600,7 @@ public sealed class OverwatchMemberRow : BoxContainer
 
             _onStartWatching(this);
             _ui.ViewCamera(_member);
+            _window?.SetWatching(_member, true);
         };
 
         _squadButton.OnPressed += _ =>

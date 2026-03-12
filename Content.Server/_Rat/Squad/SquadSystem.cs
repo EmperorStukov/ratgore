@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._Crescent.HullrotFaction;
 using Content.Shared._Rat.Squad;
 using Content.Shared.GameTicking;
 using Robust.Shared.Configuration;
@@ -77,16 +78,18 @@ public sealed class SquadSystem : EntitySystem
         if (!_squadsByFaction.TryGetValue(faction, out var factionSquads))
             return false;
 
-        if (factionSquads.TryGetValue(squadId, out var squadInfo))
-        {
-            var squadComp = EnsureComp<SquadComponent>(entity);
-            squadComp.SquadId = squadId;
-            squadComp.SquadName = squadInfo.Name;
-            Dirty(entity, squadComp, MetaData(entity));
-            return true;
-        }
+        if (!factionSquads.TryGetValue(squadId, out var squadInfo))
+            return false;
 
-        return false;
+        if (!TryComp<HullrotFactionComponent>(entity, out var factionComp) ||
+            factionComp.Faction != faction)
+            return false;
+
+        var squadComp = EnsureComp<SquadComponent>(entity);
+        squadComp.SquadId = squadId;
+        squadComp.SquadName = squadInfo.Name;
+        Dirty(entity, squadComp, MetaData(entity));
+        return true;
     }
 
     /// <summary>

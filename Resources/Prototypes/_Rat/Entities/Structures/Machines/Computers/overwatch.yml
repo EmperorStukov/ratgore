@@ -13,7 +13,7 @@
   - type: ExtensionCableReceiver
   - type: ActivatableUIRequiresPower
   - type: ActivatableUI
-    singleUser: false
+    singleUser: true
     key: enum.OverwatchUiKey.Key
   - type: Sprite
     sprite: Structures/Machines/computers.rsi

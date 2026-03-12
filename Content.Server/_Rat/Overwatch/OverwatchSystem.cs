@@ -90,6 +90,7 @@ public sealed class OverwatchSystem : EntitySystem
         SubscribeLocalEvent<RatOverwatchWatchingComponent, MoveInputEvent>(OnWatchingMoveInput);
         SubscribeLocalEvent<RatOverwatchWatchingComponent, ComponentShutdown>(OnWatchingShutdown);
         SubscribeLocalEvent<RatOverwatchCameraComponent, ComponentShutdown>(OnCameraShutdown);
+        SubscribeLocalEvent<RatOverwatchCameraComponent, EntityTerminatingEvent>(OnWatchedEntityTerminating);
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawn); // Обновление UI при спавне игрока для отображения новых членов фракции
         // Инвалидация кэша при изменении состава фракции или отрядов
         SubscribeLocalEvent<HullrotFactionComponent, ComponentInit>(OnFactionComponentInit);
@@ -330,7 +331,7 @@ public sealed class OverwatchSystem : EntitySystem
     private void OnAssignSquad(Entity<OverwatchConsoleComponent> ent, ref OverwatchAssignSquadMessage args)
     {
         var player = GetEntity(args.Player);
-        if (player == null || !player.Valid)
+        if (!player.Valid)
             return;
 
         if (!TryComp<HullrotFactionComponent>(player, out var factionComp) ||
@@ -349,7 +350,7 @@ public sealed class OverwatchSystem : EntitySystem
     private void OnRemoveSquadMember(Entity<OverwatchConsoleComponent> ent, ref OverwatchRemoveSquadMemberMessage args)
     {
         var player = GetEntity(args.Player);
-        if (player == null || !player.Valid)
+        if (!player.Valid)
             return;
 
         if (!TryComp<HullrotFactionComponent>(player, out var factionComp) ||
@@ -471,6 +472,7 @@ public sealed class OverwatchSystem : EntitySystem
 
         var cameraCompTarget = EnsureComp<RatOverwatchCameraComponent>(target);
         cameraCompTarget.Watching.Add(actor);
+        Dirty(target, cameraCompTarget);
 
         var watchingCompActor = EnsureComp<RatOverwatchWatchingComponent>(actor);
         watchingCompActor.Watching = target;
@@ -514,9 +516,10 @@ public sealed class OverwatchSystem : EntitySystem
         if (TryComp<RatOverwatchCameraComponent>(target, out var cameraCompTarget))
         {
             cameraCompTarget.Watching.Remove(watcher);
+            Dirty(target, cameraCompTarget);
         }
 
-        if (TryComp<ActorComponent>(watcher, out var actorComp))
+        if (TryComp<ActorComponent>(watcher, out var actorComp) && actorComp.PlayerSession != null)
         {
             _viewSubscriberSystem.RemoveViewSubscriber(target, actorComp.PlayerSession);
         }
@@ -571,6 +574,20 @@ public sealed class OverwatchSystem : EntitySystem
     /// Обработчик удаления компонента камеры — очищает всех наблюдателей.
     /// </summary>
     private void OnCameraShutdown(Entity<RatOverwatchCameraComponent> ent, ref ComponentShutdown args)
+    {
+        foreach (var watcher in ent.Comp.Watching.ToList())
+        {
+            if (TryComp<RatOverwatchWatchingComponent>(watcher, out var watchingComp))
+            {
+                StopWatching(watcher, watchingComp);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Обработчик удаления наблюдаемой сущности — очищает всех наблюдателей.
+    /// </summary>
+    private void OnWatchedEntityTerminating(Entity<RatOverwatchCameraComponent> ent, ref EntityTerminatingEvent args)
     {
         foreach (var watcher in ent.Comp.Watching.ToList())
         {
@@ -786,7 +803,6 @@ public sealed class OverwatchSystem : EntitySystem
             "NCWL" => Color.FromHex("#cf8e00"),
             "SHI" => Color.FromHex("#666d66"),
             "TAP" => Color.FromHex("#009c08"),
-            "TFSC" => Color.FromHex("#9b0000"),
             "IPM" => Color.FromHex("#9b0000"),
             "SAW" => Color.FromHex("#9b0000"),
             "GSC" => Color.FromHex("#9b0000"),
