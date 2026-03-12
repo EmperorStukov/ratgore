@@ -15,10 +15,10 @@
    - type: BluespaceErrorRule
      gridPath: /Maps/_NF/Bluespace/asteroidbunker.yml
      rewardFactor: 0.5 # Filler to make the bank go up
-     minX: 2000
-     minY: 2500
-     maxX: 4000
-     maxY: 6300
+     minX: -2000
+     minY: -2000
+     maxX: 2000
+     maxY: 2000
 
  #- type: entity # Need rework
  #  id: ShinoharaTrader
@@ -81,10 +81,10 @@
    - type: BluespaceErrorRule
      gridPath: /Maps/_Crescent/Bluespace/dedsite.yml
      rewardFactor: 0.5 # Filler to make the bank go up
-     minX: -7000
-     minY: -6000
-     maxX: 10000
-     maxY: 12000
+     minX: -2000
+     minY: -2000
+     maxX: 2000
+     maxY: 2000
 
 
  - type: entity # Need rework
@@ -104,10 +104,10 @@
    - type: BluespaceErrorRule
      gridPath: /Maps/_Crescent/Bluespace/derelictprobe.yml
      rewardFactor: 0.5 # Filler to make the bank go up
-     minX: -4000
-     minY: -3000
-     maxX: 7000
-     maxY: 12000
+     minX: -2000
+     minY: -2000
+     maxX: 2000
+     maxY: 2000
 
  - type: entity # Need rework
    id: InfestedStation
@@ -126,7 +126,7 @@
    - type: BluespaceErrorRule
      gridPath: /Maps/_Crescent/Bluespace/hearthruins.yml
      rewardFactor: 0.5 # Filler to make the bank go up
-     minX: 12000
-     minY: -3000
-     maxX: 7000
-     maxY: 16000
+     minX: -2000
+     minY: -2000
+     maxX: 2000
+     maxY: 2000
