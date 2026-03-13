@@ -6,6 +6,9 @@
   requirements:
     - !type:FactionRequirement
       factionID: "DSM"
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Human
     - !type:CharacterOverallTimeRequirement
       min: 20000
     - !type:CharacterTraitRequirement
@@ -79,15 +82,16 @@
   id: UnionfallOfficerDSMGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitImperialGovernor
-    neck: ClothingNeckIFFCyan
+    neck: ClothingNeckCloakImperialCapelet
     back: ClothingBackpackDSM
     shoes: ClothingShoesBootsMagDSM
     head: ClothingHeadHatImperialBeret
-    outerClothing: ClothingOuterHardsuitImperialCommand
+    gloves: ClothingHandsGlovesImperialLonggloves
+    outerClothing: ClothingOuterHardsuitImperialKnight
     id: KnightPDA
     belt: ClothingBeltAssaultFilledAdjutant
     pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: SyndicateWhistle
+    pocket2: Whistle
     ears: ClothingHeadsetEmpire
     suitstorage: WeaponSniperDSMLegax
     eyes: ClothingEyesHudSecurity
@@ -95,7 +99,7 @@
     - JetpackBlackFilled
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolNeoVolker
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskImperialCombatGasmask
+    - WeaponPistolNeoVolker
+    - CrowbarRed
+    - HandHeldMassScannerEE

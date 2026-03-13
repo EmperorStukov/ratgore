@@ -57,26 +57,24 @@
     belt: ClothingBeltNCWLPouchesFilledMedic
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: ParamedHypo
-    outerClothing: ClothingOuterHardsuitNCWLMedi
+    outerClothing: ClothingOuterCoatAuthorityChirurgeon
     head: ClothingHeadHatNCWLCapsoftMedical
     suitstorage: WeaponPistolT91
     back: ClothingBackpackSatchelMedical
     gloves: ClothingHandsGlovesNitrile
     eyes: ClothingEyesHudMedSec
   inhand:
-    - BookUnionfallNCWLGuide
-    - JetpackBlackFilled
+    - UnionfallNCWLCadetNote
   storage:
     back:
-      - DefibrillatorCompact
-      - BoxMRE
-      - MedkitCombatFilled
-      - OmnizineChemistryBottle
-      - Bloodpack
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - DefibrillatorCompact
+    - MedkitCombatFilled
+    - OmnizineChemistryBottle
+    - Bloodpack
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CrowbarRed
+    - HandHeldMassScannerEE
