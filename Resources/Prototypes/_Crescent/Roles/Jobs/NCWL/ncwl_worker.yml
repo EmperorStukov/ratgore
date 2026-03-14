@@ -3,6 +3,16 @@
   name: job-name-ncwl-newbie
   description: job-description-ncwl-newbie
   playTimeTracker: JobWorkerNCWL
+  ranks:
+    RatRankWorkerSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobWorkerNCWL
+      min: 72000 # 20 hours
+    RatRankWorkerMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobWorkerNCWL
+      min: 360000 # 10 hours
+    RatRankWorkerJunior: []
   weight: 1
   startingGear: WorkerNCWLGear
   alwaysUseSpawner: true
@@ -20,8 +30,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-worker
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

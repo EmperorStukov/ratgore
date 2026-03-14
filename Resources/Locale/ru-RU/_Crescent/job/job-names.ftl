@@ -5,20 +5,20 @@ job-name-utility-ipc = NT Engineer IPC
 
 # ncwl
 
-job-name-ncwl-faction-leader = Майор
+job-name-ncwl-faction-leader = Генерал
 job-name-ncwl-kommissar = Комиссар
-job-name-ncwl-mvd-officer = Курсант комиссариата
+job-name-ncwl-mvd-officer = Курсант комиссариата # удалили
 job-name-ncwl-mvd-grunt = Помощник Комиссара
-job-name-ncwl-fleetkapitan = Капитан Флота
-job-name-ncwl-partisan = Партизан
-job-name-ncwl-industry-taskmaster = Старший Инженер
+job-name-ncwl-fleetkapitan = Офицер Флота
+job-name-ncwl-partisan = Ополченец
+job-name-ncwl-industry-taskmaster = Старший Техник
 job-name-ncwl-industry-artificer = Инженер
 job-name-ncwl-medical-director = Главный Врач
-job-name-ncwl-artificer = Исследователь
-job-name-ncwl-worker-overboss = Начальник Снабжения
+job-name-ncwl-artificer = Исследователь # удалили
+job-name-ncwl-worker-overboss = Координатор
 job-name-ncwl-worker-dockhand = Грузчик
 job-name-ncwl-medical-doctor = Санитар
-job-name-ncwl-coordinator = Координатор Союза
+job-name-ncwl-coordinator = Координатор Союза # удалили
 job-name-ncwl-newbie = Рабочий Союза
 
 # syndicate
@@ -53,7 +53,7 @@ job-name-archmaester = Архимейстер
 job-name-governor = Лорд-адмирал
 job-name-foremanimp = Надсмотрщик
 job-name-imperialresearch = Писарь
-job-name-surgeon = Хирург
+job-name-surgeon = Медикатус
 job-name-wealth = Рыцарь-снабженец
 job-name-advocatus = Министр Просвящения
 job-name-advocatustemplar = Рыцарь-тамплиер

@@ -2,16 +2,16 @@
   id: RatRankFreeholderSenior
   name: Прониар
   prefix: Прониар
-  paygrade: E3
+  paygrade: К3
 
 - type: rank
   id: RatRankFreeholderMiddle
   name: Йомен
   prefix: Йомен
-  paygrade: E2
+  paygrade: К2
 
 - type: rank
   id: RatRankFreeholderJunior
   name: Фригольдер
   prefix: Фригольдер
-  paygrade: E1
+  paygrade: К1

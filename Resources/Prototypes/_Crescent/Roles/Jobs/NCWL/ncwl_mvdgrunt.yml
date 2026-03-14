@@ -3,6 +3,16 @@
   name: job-name-ncwl-mvd-grunt
   description: job-description-ncwl-mvd-grunt
   playTimeTracker: JobMVDGruntNCWL
+  ranks:
+    RatRankMVDGruntSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobMVDGruntNCWL
+      min: 72000 # 20 hours
+    RatRankCommandantMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobMVDGruntNCWL
+      min: 360000 # 10 hours
+    RatRankMVDGruntJunior: []
   weight: 99
   startingGear: MVDGruntNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-mvd-grunt
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

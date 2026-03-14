@@ -3,6 +3,24 @@
   name: job-name-ncwl-partisan
   description: job-description-ncwl-partisan
   playTimeTracker: JobHomeguardSoldatNCWL
+  ranks:
+    RatRankPartisanHead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardSoldatNCWL
+      min: 144000 # 40 hours
+    RatRankPartisanLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardSoldatNCWL
+      min: 108000 # 30 hours
+    RatRankPartisanSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardSoldatNCWL
+      min: 72000 # 20 hours
+    RatRankPartisanMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardSoldatNCWL
+      min: 360000 # 10 hours
+    RatRankPartisanJunior: []
   weight: 97
   startingGear: SoldatNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +47,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-home-soldat
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

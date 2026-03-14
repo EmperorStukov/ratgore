@@ -3,6 +3,16 @@
   name: job-name-ncwl-industry-taskmaster
   description: job-description-ncwl-industry-taskmaster
   playTimeTracker: JobEngineeringLeaderNCWL
+  ranks:
+    RatRankTaskmasterSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobEngineeringLeaderNCWL
+      min: 72000 # 20 hours
+    RatRankTaskmasterMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobEngineeringLeaderNCWL
+      min: 360000 # 10 hours
+    RatRankTaskmasterJunior: []
   weight: 94
   startingGear: IndustryTaskmasterNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-engi-leader
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

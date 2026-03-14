@@ -3,6 +3,16 @@
   name: job-name-ncwl-kommissar
   description: job-description-ncwl-kommissar
   playTimeTracker: JobHomeguardLeaderNCWL
+  ranks:
+    RatRankKommissarSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardLeaderNCWL
+      min: 72000 # 20 hours
+    RatRankKommissarMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardLeaderNCWL
+      min: 360000 # 10 hours
+    RatRankKommissarJunior: []
   weight: 101
   startingGear: OverseerNCWLGear
   alwaysUseSpawner: true
@@ -30,8 +40,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-home-leader
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

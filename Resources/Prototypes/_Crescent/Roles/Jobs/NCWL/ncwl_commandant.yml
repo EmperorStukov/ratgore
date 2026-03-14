@@ -3,6 +3,16 @@
   name: job-name-ncwl-faction-leader
   description: job-description-ncwl-faction-leader
   playTimeTracker: JobFactionLeaderNCWL
+  ranks:
+    RatRankCommandantSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobFactionLeaderNCWL
+      min: 72000 # 20 hours
+    RatRankCommandantMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobFactionLeaderNCWL
+      min: 360000 # 10 hours
+    RatRankCommandantJunior: []
   weight: 102
   startingGear: CommandantNCWLGear
   alwaysUseSpawner: true
@@ -30,8 +40,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-faction-leader
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

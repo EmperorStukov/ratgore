@@ -3,6 +3,16 @@
   name: job-name-ncwl-medical-director
   description: job-description-ncwl-medical-director
   playTimeTracker: JobMedicalLeaderNCWL
+  ranks:
+    RatRankDirectorSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobMedicalLeaderNCWL
+      min: 72000 # 20 hours
+    RatRankDirectorMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobMedicalLeaderNCWL
+      min: 360000 # 10 hours
+    RatRankDirectorJunior: []
   weight: 96
   startingGear: DirectorNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-medi-leader
       - type: HullrotFaction
         faction: NCWL
       - type: CPRTraining

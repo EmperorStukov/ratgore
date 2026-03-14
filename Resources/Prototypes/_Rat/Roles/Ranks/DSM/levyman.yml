@@ -2,28 +2,28 @@
   id: RatRankLevymanHead
   name: Легат
   prefix: Легат
-  paygrade: E5
+  paygrade: Л5
 
 - type: rank
   id: RatRankLevymanLead
   name: Центурион
   prefix: Центурион
-  paygrade: E4
+  paygrade: Л4
 
 - type: rank
   id: RatRankLevymanSenior
   name: Трибун
   prefix: Трибун
-  paygrade: E3
+  paygrade: Л3
 
 - type: rank
   id: RatRankLevymanMiddle
   name: Проктор
   prefix: Проктор
-  paygrade: E2
+  paygrade: Л2
 
 - type: rank
   id: RatRankLevymanJunior
   name: Леви
   prefix: Леви
-  paygrade: E1
+  paygrade: Л1

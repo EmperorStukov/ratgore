@@ -1,17 +1,17 @@
 - type: rank
   id: RatRankWorkerSenior
-  name: Прониар
-  prefix: Прониар
-  paygrade: E3
+  name: Старший Рабочий
+  prefix: Ст. Рабочий
+  paygrade: Е3
 
 - type: rank
   id: RatRankWorkerMiddle
-  name: Йомен
-  prefix: Йомен
-  paygrade: E2
+  name: Рабочий
+  prefix: Рабочий
+  paygrade: Е2
 
 - type: rank
   id: RatRankWorkerJunior
-  name: Фригольдер
-  prefix: Фригольдер
-  paygrade: E1
+  name: Рядовой Рабочий
+  prefix: Ряд. Рабочий
+  paygrade: Е1

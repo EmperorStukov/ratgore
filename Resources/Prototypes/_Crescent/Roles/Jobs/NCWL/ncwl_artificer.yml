@@ -3,6 +3,16 @@
   name: job-name-ncwl-industry-artificer
   description: job-description-ncwl-industry-artificer
   playTimeTracker: JobEngineeringWorkerNCWL
+  ranks:
+    RatRankArtificerSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobEngineeringWorkerNCWL
+      min: 72000 # 20 hours
+    RatRankArtificerMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobEngineeringWorkerNCWL
+      min: 360000 # 10 hours
+    RatRankArtificerJunior: []
   weight: 93
   startingGear: ArtificerNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-engi-worker
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

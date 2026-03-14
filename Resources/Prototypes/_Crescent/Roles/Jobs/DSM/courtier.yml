@@ -3,6 +3,24 @@
   name: job-name-courtier
   description: job-description-courtier
   playTimeTracker: JobCourtierDSM
+  ranks:
+    RatRankCourtierHead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCourtierDSM
+      min: 144000 # 40 hours
+    RatRankCourtierLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCourtierDSM
+      min: 108000 # 30 hours
+    RatRankCourtierSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCourtierDSM
+      min: 72000 # 20 hours
+    RatRankCourtierMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCourtierDSM
+      min: 360000 # 10 hours
+    RatRankCourtierJunior: []
   weight: 52
   startingGear: CourtierGear
   alwaysUseSpawner: true
@@ -22,8 +40,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-courtier
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder

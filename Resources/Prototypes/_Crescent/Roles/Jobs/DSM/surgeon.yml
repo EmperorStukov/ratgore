@@ -3,6 +3,16 @@
   name: job-name-surgeon
   description: job-description-surgeon
   playTimeTracker: JobSurgeonDSM
+  ranks:
+    RatRankSurgeonSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobSurgeonDSM
+      min: 72000 # 20 hours
+    RatRankSurgeonMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobSurgeonDSM
+      min: 360000 # 10 hours
+    RatRankSurgeonJunior: []
   weight: 2
   startingGear: SurgeonGear
   alwaysUseSpawner: true
@@ -28,8 +38,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-smarts
       - type: HullrotFaction
         faction: DSM
       - type: CPRTraining

@@ -100,6 +100,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      baseMaxLinearVelocity: 0
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -31504,7 +31505,7 @@ entities:
       pos: 0.5,8.5
       parent: 1
     - type: WarpPoint
-      location: CDT Dawnbreaker
+      location: ТК Секира
 - proto: WaterCooler
   entities:
   - uid: 2901

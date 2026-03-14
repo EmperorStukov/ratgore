@@ -3,6 +3,16 @@
   name: job-name-ncwl-worker-overboss
   description: job-description-ncwl-worker-overboss
   playTimeTracker: JobLogisticLeaderNCWL
+  ranks:
+    RatRankOverbossSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLogisticLeaderNCWL
+      min: 72000 # 20 hours
+    RatRankOverbossMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLogisticLeaderNCWL
+      min: 360000 # 10 hours
+    RatRankOverbossJunior: []
   weight: 92
   startingGear: DockmasterNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-logi-leader
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

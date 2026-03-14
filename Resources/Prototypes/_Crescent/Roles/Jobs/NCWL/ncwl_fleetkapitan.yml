@@ -3,6 +3,16 @@
   name: job-name-ncwl-fleetkapitan
   description: job-description-ncwl-fleetkapitan
   playTimeTracker: JobHomeguardSquadCaptainNCWL
+  ranks:
+    RatRankFleetkapitanSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardSquadCaptainNCWL
+      min: 72000 # 20 hours
+    RatRankFleetkapitanMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHomeguardSquadCaptainNCWL
+      min: 360000 # 10 hours
+    RatRankFleetkapitanJunior: []
   weight: 98
   startingGear: CaptainNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-home-squad-lead
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

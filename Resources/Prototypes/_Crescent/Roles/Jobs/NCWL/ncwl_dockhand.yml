@@ -3,6 +3,16 @@
   name: job-name-ncwl-worker-dockhand
   description: job-description-ncwl-worker-dockhand
   playTimeTracker: JobLogisticWorkerNCWL
+  ranks:
+    RatRankDockhandSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLogisticWorkerNCWL
+      min: 72000 # 20 hours
+    RatRankDockhandMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLogisticWorkerNCWL
+      min: 360000 # 10 hours
+    RatRankDockhandJunior: []
   weight: 91
   startingGear: DockhandNCWLGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ncwl-worker
       - type: HullrotFaction
         faction: NCWL
       - type: LanguageAdder

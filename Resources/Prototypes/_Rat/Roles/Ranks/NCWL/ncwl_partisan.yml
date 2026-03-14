@@ -1,29 +1,29 @@
 - type: rank
   id: RatRankPartisanHead
-  name: Легат
-  prefix: Легат
-  paygrade: E5
+  name: Старший Сержант Ополченец
+  prefix: Ст. Серж. Ополченец
+  paygrade: Е5
 
 - type: rank
   id: RatRankPartisanLead
-  name: Центурион
-  prefix: Центурион
-  paygrade: E4
+  name: Сержант Ополченец
+  prefix: Серж. Ополченец
+  paygrade: Е4
 
 - type: rank
   id: RatRankPartisanSenior
-  name: Трибун
-  prefix: Трибун
-  paygrade: E3
+  name: Младшний Сержант Ополченец
+  prefix: Мл. Серж. Ополченец
+  paygrade: Е3
 
 - type: rank
   id: RatRankPartisanMiddle
-  name: Проктор
-  prefix: Проктор
-  paygrade: E2
+  name: Ефрейтор Ополченец
+  prefix: Ефр. Ополченец
+  paygrade: Е2
 
 - type: rank
   id: RatRankPartisanJunior
-  name: Леви
-  prefix: Леви
-  paygrade: E1
+  name: Рядовой Ополченец
+  prefix: Ряд. Ополченец
+  paygrade: Е1

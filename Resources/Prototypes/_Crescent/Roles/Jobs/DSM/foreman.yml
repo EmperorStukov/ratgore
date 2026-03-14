@@ -3,6 +3,16 @@
   name: job-name-foremanimp
   description: job-description-foremanimp
   playTimeTracker: JobForemanDSM
+  ranks:
+    RatRankForemanSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobForemanDSM
+      min: 72000 # 20 hours
+    RatRankForemanMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobForemanDSM
+      min: 360000 # 10 hours
+    RatRankForemanJunior: []
   weight: 3
   startingGear: ForemanImpGear
   alwaysUseSpawner: true
@@ -29,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-foreman
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder
