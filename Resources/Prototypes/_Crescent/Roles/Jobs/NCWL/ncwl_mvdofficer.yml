@@ -6,11 +6,11 @@
   ranks:
     RatRankKommissarMiddle:
     - !type:CharacterPlaytimeRequirement
-      tracker: JobHomeguardLeaderNCWL
+      tracker: JobMVDOfficerNCWL
       min: 72000 # 20 hours
     RatRankKommissarJunior:
     - !type:CharacterPlaytimeRequirement
-      tracker: JobHomeguardLeaderNCWL
+      tracker: JobMVDOfficerNCWL
       min: 36000 # 10 hours
     RatRankKommissarNovice: []
   weight: 100

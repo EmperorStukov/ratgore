@@ -23,7 +23,7 @@
     RatRankNobleBaron:
     - !type:CharacterPlaytimeRequirement
       tracker: JobCourtierDSM
-      min: 360000 # 10 hours
+      min: 36000 # 10 hours
     RatRankNoblePatrician: []
   weight: 52
   startingGear: CourtierGear

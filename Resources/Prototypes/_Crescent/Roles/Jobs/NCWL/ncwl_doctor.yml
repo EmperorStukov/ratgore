@@ -27,7 +27,7 @@
     RatRankNCWLEnlistedMiddle:
     - !type:CharacterPlaytimeRequirement
       tracker: JobMedicalWorkerNCWL
-      min: 360000 # 10 hours
+      min: 36000 # 10 hours
     RatRankNCWLEnlistedJunior: []
   weight: 95
   startingGear: DoctorNCWLGear

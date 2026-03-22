@@ -27,7 +27,7 @@
     RatRankNCWLEnlistedMiddle:
     - !type:CharacterPlaytimeRequirement
       tracker: JobLogisticWorkerNCWL
-      min: 360000 # 10 hours
+      min: 36000 # 10 hours
     RatRankNCWLEnlistedJunior: []
   weight: 91
   startingGear: DockhandNCWLGear

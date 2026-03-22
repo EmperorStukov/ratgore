@@ -12,7 +12,7 @@
     - !type:CharacterPlaytimeRequirement
       tracker: JobMVDGruntNCWL
       min: 72000 # 20 hours
-    RatRankCommandantMiddle:
+    RatRankMVDGruntMiddle:
     - !type:CharacterPlaytimeRequirement
       tracker: JobMVDGruntNCWL
       min: 36000 # 10 hours

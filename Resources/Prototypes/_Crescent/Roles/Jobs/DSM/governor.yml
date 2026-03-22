@@ -6,12 +6,12 @@
   ranks:
     RatRankNobleArchduke:
     - !type:CharacterPlaytimeRequirement
-      tracker: JobCourtierDSM
+      tracker: JobGovernorDSM
       min: 72000 # 20 hours
     RatRankNobleDukeAdmiral:
     - !type:CharacterPlaytimeRequirement
-      tracker: JobCourtierDSM
-      min: 360000 # 10 hours
+      tracker: JobGovernorDSM
+      min: 36000 # 10 hours
     RatRankNobleMarkgraf: []
   weight: 100
   startingGear: GovernorGear
