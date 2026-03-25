@@ -193,6 +193,7 @@ public sealed class SandevistanSystem : EntitySystem
 
     private void Disable(EntityUid uid, SandevistanUserComponent comp)
     {
+        comp.DisableAt = null;
         comp.ColorAccumulator = 0;
         comp.Enabled = false;
         _audio.Stop(comp.RunningSound);
