@@ -3,6 +3,21 @@
   name: job-name-ordnanceman
   description: job-description-ordnanceman
   playTimeTracker: JobOrdnancemanCMM
+  ranks:
+      min: 144000 # 40 hours
+    RatRankCMMMinutemanThird:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOrdnancemanCMM
+      min: 108000 # 30 hours
+    RatRankCMMMinutemanSrLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOrdnancemanCMM
+      min: 72000 # 20 hours
+    RatRankCMMMinutemanLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOrdnancemanCMM
+      min: 36000 # 10 hours
+    RatRankCMMMinutemanSenior: []
   weight: 18
   startingGear: OrdnancemanGear
   alwaysUseSpawner: true
@@ -22,8 +37,13 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ordnance
+      - type: LanguageAdder
+        addSpoken:
+          - American
+          - Tradeband
+        addUnderstood:
+          - American
+          - Tradeband
   access:
   - Command
   - Maintenance
