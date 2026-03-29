@@ -44,7 +44,6 @@ public sealed class TelescopeSystem : SharedTelescopeSystem
                     : InputCmdHandler.FromDelegate(_ =>
                     {
                         _toggled = !_toggled;
-
                         if (!_toggled)
                             ForceRaiseEvent(Vector2.Zero);
                     });
@@ -139,9 +138,7 @@ public sealed class TelescopeSystem : SharedTelescopeSystem
     {
         if (Vector2.DistanceSquared(_lastSentOffset, offset) < OffsetEpsilon * OffsetEpsilon)
             return;
-
         _lastSentOffset = offset;
-
         RaisePredictiveEvent(new EyeOffsetChangedEvent
         {
             Offset = offset
@@ -151,7 +148,6 @@ public sealed class TelescopeSystem : SharedTelescopeSystem
     private void ForceRaiseEvent(Vector2 offset)
     {
         _lastSentOffset = offset;
-
         RaisePredictiveEvent(new EyeOffsetChangedEvent
         {
             Offset = offset
