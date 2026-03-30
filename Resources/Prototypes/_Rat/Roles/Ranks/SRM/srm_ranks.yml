@@ -1,0 +1,91 @@
+# SRM Ranks
+
+- type: rank
+  id: RatRankSRMOverseerSenior
+  name: Владыка охоты
+  prefix: Владыка
+  paygrade: SRM-C6
+
+- type: rank
+  id: RatRankSRMOverseerMiddle
+  name: Великий надзиратель охоты
+  prefix: Великий надзиратель
+  paygrade: SRM-C5
+
+- type: rank
+  id: RatRankSRMOverseerJunior
+  name: Надзиратель охоты
+  prefix: Надзиратель
+  paygrade: SRM-C4
+
+- type: rank
+  id: RatRankSRMMontagneSenior
+  name: Сенешаль охоты
+  prefix: Сенешаль
+  paygrade: SRM-C3
+
+- type: rank
+  id: RatRankSRMMontagneMiddle
+  name: Распорядитель охоты
+  prefix: Распорядитель
+  paygrade: SRM-C2
+
+- type: rank
+  id: RatRankSRMMontagneJunior
+  name: Младший распорядитель охоты
+  prefix: Мл. распорядитель
+  paygrade: SRM-C1
+
+- type: rank
+  id: RatRankSRMHunterSrLead
+  name: Мастер-охотник
+  prefix: Мастер
+  paygrade: SRM9
+
+- type: rank
+  id: RatRankSRMHunterHigh
+  name: Ветеран охоты
+  prefix: Брат-ветеран
+  paygrade: SRM8
+
+- type: rank
+  id: RatRankSRMHunterLead
+  name: Старший охотник
+  prefix: Ст. брат-охотник
+  paygrade: SRM7
+
+- type: rank
+  id: RatRankSRMHunterSenior
+  name: Опытный охотник
+  prefix: Брат-охотник
+  paygrade: SRM6
+
+- type: rank
+  id: RatRankSRMHunterMiddle
+  name: Охотник
+  prefix: Брат-охотник
+  paygrade: SRM5
+
+- type: rank
+  id: RatRankSRMHunterJunior
+  name: Младший охотник
+  prefix: Брат-охотник
+  paygrade: SRM4
+
+- type: rank
+  id: RatRankSRMApprenticeHigh
+  name: Ученик охоты
+  prefix: Ученик
+  paygrade: SRM3
+
+- type: rank
+  id: RatRankSRMApprenticeMiddle
+  name: Послушник охоты
+  prefix: Послушник
+  paygrade: SRM2
+
+- type: rank
+  id: RatRankSRMApprenticeJunior
+  name: Свежая кровь
+  prefix: Щенок
+  paygrade: SRM1

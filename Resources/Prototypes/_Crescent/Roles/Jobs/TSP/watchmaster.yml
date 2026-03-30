@@ -69,6 +69,7 @@
     head: ClothingHeadHatWatchmaster
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     pocket1: WeaponPistolHKUSP
     id: WatchmasterPDA
     ears: ClothingHeadsetCMM

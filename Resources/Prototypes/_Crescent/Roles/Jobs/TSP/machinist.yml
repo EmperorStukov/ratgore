@@ -68,6 +68,7 @@
     head: ClothingHeadHelmetCMMMachinist
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltUtilityEngineering
+    back: ClothingBackpackMinuteman
     id: MachinistPDA
     ears: ClothingHeadsetCMM
     pocket1: WeaponPistolHKUSP

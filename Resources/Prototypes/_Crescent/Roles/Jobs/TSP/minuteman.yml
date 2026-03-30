@@ -71,6 +71,7 @@
     head: ClothingHeadHatMinuteman
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     pocket1: WeaponPistolHKUSP
     id: MinutemanPDA
     ears: ClothingHeadsetCMM

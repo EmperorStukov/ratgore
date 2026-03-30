@@ -110,7 +110,7 @@ job-description-spacer = Будь независимым гражданином 
 job-description-gliess-sheriff = Следи за законом в Глиесс-Санто.
 job-description-gliess-deputy = Помогай Шерифу поддерживать закон в Глиесс-Санто.
 job-description-gliess-dockmaster = Следи, чтобы никто не взорвал твою станцию.
-job-description-dockhand = Помогай Док-мастеру обслуживать Глиесс-Санто.
+job-description-dockhand = Помогай маршалу и минитменам обслуживать Глиесс-Санто.
 
 # conscript-ncwl - for PLANETFALL
 job-description-conscript-ncwl-ship-captain = Пилотируй «Клементину». Следи за её сохранностью и грамотно используй вооружение. Погибни вместе с кораблём.

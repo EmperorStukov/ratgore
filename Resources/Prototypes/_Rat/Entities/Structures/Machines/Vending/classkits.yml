@@ -7,14 +7,16 @@
   - type: Sprite
     sprite: _Crescent/Structures/syndicatearmory.rsi
   - type: CMAutomatedVendor
+    jobs:
+    - PartisanNCWL
     sections:
-    - name: Class Kit
+    - name: Классовый набор
       choices: { CMClass: 1 }
       entries:
       - id: CMVendorBundleRiflemanApparelNCWL
         name: базовый набор ЛРНП
         recommended: true
-    - name: Armor kit
+    - name: Броня
       choices: { CMArmour: 1 }
       entries:
       - id: ClothingOuterHardsuitNCWLInfantry
@@ -22,7 +24,7 @@
         recommended: true    
       - id: ClothingOuterArmorNCWLHeavyCarapace
         name: бронежилет ЛРНП
-    - name: Weapon kits
+    - name: Основное оружие
       choices: { CMWeapon: 1 }
       entries:
       - id: WeaponRifleFAL
@@ -32,7 +34,7 @@
         name: НКВЛ Тоз-97 Пролетарий 12 кал
       - id: WeaponSubMachineGunNCWLWatchdog
         name: НКВЛ ДС1 Страж 9x19mm
-    - name: Utilities
+    - name: Утилиты
       choices: { CMUtilities: 2 }
       entries:
       - id: ExGrenade
@@ -44,7 +46,7 @@
       - id: HandHeldMassScannerEE
         name: портативный сканер масс
         recommended: true   
-    - name: Ammo
+    - name: Боеприпасы
       choices: { CMAmmo: 2 }
       entries:
       - id: MagazinePistolSubMachineGun
@@ -63,14 +65,16 @@
   - type: Sprite
     sprite: _Crescent/Structures/syndicatearmory.rsi
   - type: CMAutomatedVendor
+    jobs:
+    - LevymanDSM
     sections:
-    - name: Class Kit
+    - name: Классовый набор
       choices: { CMClass: 1 }
       entries:
       - id: CMVendorBundleRiflemanApparelDSM
         name: базовый набор БМС
         recommended: true
-    - name: Armor kit
+    - name: Броня
       choices: { CMArmour: 1 }
       entries:
       - id: ClothingOuterHardsuitImperialSoldier
@@ -78,7 +82,7 @@
         recommended: true    
       - id: ClothingOuterArmorImperialTrooperArmor
         name: бронежилет БМС
-    - name: Weapon kits
+    - name: Основное оружие
       choices: { CMWeapon: 1 }
       entries:
       - id: WeaponShotgunReno
@@ -88,7 +92,7 @@
         recommended: true
       - id: WeaponSubMachineGunBeetle
         name: ХП Мак-11 Жук 9x19 мм
-    - name: Utilities
+    - name: Утилиты
       choices: { CMUtilities: 2 }
       entries:
       - id: ExGrenade
@@ -100,7 +104,7 @@
       - id: HandHeldMassScannerEE
         name: портативный сканер масс
         recommended: true 
-    - name: Ammo
+    - name: Боеприпасы
       choices: { CMAmmo: 2 }
       entries:
       - id: MagazinePistolSubMachineGun
@@ -119,6 +123,14 @@
   - type: Sprite
     sprite: _Crescent/Structures/syndicatearmory.rsi
   - type: CMAutomatedVendor
+    jobs:
+    - OrdnancemanCMM
+    - MachinistCMM
+    - PhysicianCMM
+    - MinutemanCMM
+    - WatchmasterCMM
+    - DeputyMarshalCMM
+    - MarshalCMM
     sections:
     - name: Классовый набор
       choices: { CMClass: 1 }
@@ -140,7 +152,7 @@
       - id: WeaponShotgunSHIDoubleBarreled4g
         name: SHI M135 Двустволка 12g
       - id: WeaponRifleCMMNimrod
-        name: НТ MP5 9x19mm
+        name: КММ M32 Нимрод 7.62x51mm
         recommended: true
       - id: WeaponSubMachineGunMP5
         name: НТ MP5 9x19mm

@@ -87,9 +87,9 @@ ent-AcolytePDA = ПДА ученика
     .desc = Украшено для Охоты.
 ent-HunterPDA = ПДА охотника
     .desc = Украшено для Охоты.
-ent-MontagnePDA = ПДА охотника Montagne
+ent-MontagnePDA = ПДА охотника Монтанье
     .desc = Украшено для Охоты.
-ent-OverseerPDA = ПДА надзирателя
+ent-OverseerPDA = ПДА надзирателя Охоты
     .desc = Украшено для Охоты.
 
 ent-ExecutivePDA = ПДА менеджера

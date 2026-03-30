@@ -68,7 +68,9 @@
     head: ClothingHeadHatCMMDeputyMarshal
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     pocket1: WeaponRevolverSnubnose
+    pocket2: RatRubberStampCMM
     id: DeputyMarshalPDA
     ears: ClothingHeadsetCMM
     outerClothing: ClothingOuterArmorCMMDeputyCarapace

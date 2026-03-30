@@ -67,6 +67,7 @@
     head: ClothingHeadHatBeretCap
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     id: OrdnancemanPDA
     ears: ClothingHeadsetCMM
     pocket1: WeaponPistolHKUSP
