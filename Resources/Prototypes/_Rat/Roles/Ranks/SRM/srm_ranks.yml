@@ -38,8 +38,8 @@
 
 - type: rank
   id: RatRankSRMHunterSrLead
-  name: Мейстер охоты
-  prefix: Мейстер
+  name: Старейшина охоты
+  prefix: Старейшина
   paygrade: SRM9
 
 - type: rank
