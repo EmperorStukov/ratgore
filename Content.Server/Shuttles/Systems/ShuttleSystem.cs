@@ -221,11 +221,16 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
             {
                 RemComp<MassCloakComponent>(gridUid);
                 RemComp<MassCloakedByComponent>(gridUid);
-                // Also clear the IFF hide flag
+                // Only clear the IFF hide flag if mass cloak set it (now that we're removing MassCloakedByComponent,
+                // no other mass cloak system is managing this grid, so it's safe to remove the flag)
                 if (TryComp(gridUid, out IFFComponent? iff))
                 {
-                    iff.Flags &= ~IFFFlags.Hide;
-                    Dirty(gridUid, iff);
+                    // Check if Hide flag is set before trying to remove it
+                    if ((iff.Flags & IFFFlags.Hide) != 0)
+                    {
+                        iff.Flags &= ~IFFFlags.Hide;
+                        Dirty(gridUid, iff);
+                    }
                 }
             }
         }
@@ -237,18 +242,36 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
 
             // Track which console is cloaking this grid
             var cloakedBy = EnsureComp<MassCloakedByComponent>(gridUid);
-            cloakedBy.CloakingConsoleUid = consoleUid;
-            
-            // Find and set the cloaking range from the console
-            foreach (var (cuid, _, comp) in activeFields)
+
+            // Only update and mark dirty if the console UID actually changed
+            if (cloakedBy.CloakingConsoleUid != consoleUid)
             {
-                if (cuid == consoleUid)
+                cloakedBy.CloakingConsoleUid = consoleUid;
+
+                // Find and set the cloaking range from the console
+                foreach (var (cuid, _, comp) in activeFields)
                 {
-                    cloakedBy.CloakingRange = comp.MassCloakRange;
-                    break;
+                    if (cuid == consoleUid)
+                    {
+                        cloakedBy.CloakingRange = comp.MassCloakRange;
+                        break;
+                    }
                 }
+                Dirty(gridUid, cloakedBy);
             }
-            Dirty(gridUid, cloakedBy);
+            else if (cloakedBy.CloakingRange != activeFields.FirstOrDefault(f => f.ConsoleUid == consoleUid).Comp.MassCloakRange)
+            {
+                // Only update range if it actually changed
+                foreach (var (cuid, _, comp) in activeFields)
+                {
+                    if (cuid == consoleUid)
+                    {
+                        cloakedBy.CloakingRange = comp.MassCloakRange;
+                        break;
+                    }
+                }
+                Dirty(gridUid, cloakedBy);
+            }
 
             // Also set the IFF hide flag (create IFF component if needed)
             if (!TryComp(gridUid, out IFFComponent? iff))
@@ -257,8 +280,12 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
             }
             if (iff != null)
             {
-                iff.Flags |= IFFFlags.Hide;
-                Dirty(gridUid, iff);
+                // Only mark dirty if Hide flag isn't already set
+                if ((iff.Flags & IFFFlags.Hide) == 0)
+                {
+                    iff.Flags |= IFFFlags.Hide;
+                    Dirty(gridUid, iff);
+                }
             }
         }
     }

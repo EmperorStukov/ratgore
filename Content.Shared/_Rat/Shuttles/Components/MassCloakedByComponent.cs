@@ -7,18 +7,18 @@ namespace Content.Shared._Rat.Shuttles.Components;
 /// Marks that this grid is currently mass cloaked by a specific console.
 /// This component is used to track which console is doing the cloaking for visibility calculations.
 /// </summary>
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class MassCloakedByComponent : Component
 {
     /// <summary>
     /// The UID of the console entity that is cloaking this grid.
     /// </summary>
-    [ViewVariables]
+    [ViewVariables, AutoNetworkedField]
     public EntityUid CloakingConsoleUid;
 
     /// <summary>
     /// The range of the cloaking field. Used to check if off-grid viewers are in the field.
     /// </summary>
-    [ViewVariables]
+    [ViewVariables, AutoNetworkedField]
     public float CloakingRange = 100f;
 }

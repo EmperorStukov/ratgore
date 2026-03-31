@@ -132,6 +132,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         }
 
         // If the grid is hidden, check if the viewer is also inside the same cloak field
+        // If the grid is hidden, check if the viewer is also inside the same cloak field
         if ((iffComp.Flags & IFFFlags.Hide) != 0x0)
         {
             if (viewer == null)
@@ -162,6 +163,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         }
 
         return true;
+
     }
 
     public bool IsBeaconMap(EntityUid mapUid)

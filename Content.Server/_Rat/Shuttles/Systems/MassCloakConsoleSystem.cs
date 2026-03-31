@@ -41,32 +41,20 @@ public sealed partial class MassCloakConsoleSystem : EntitySystem
     {
         component.MassCloakEnabled = args.Enabled;
         component.MassCloakRange = Math.Clamp(args.Range, MassCloakConsoleComponent.MassCloakMinRange, MassCloakConsoleComponent.MassCloakMaxRange);
+        Dirty(uid, component);
         UpdateInterface(uid, component);
     }
 
     private void OnAnchor(EntityUid uid, MassCloakConsoleComponent component, ref AnchorStateChangedEvent args)
     {
         // If we anchor / re-anchor then make sure state is up to date.
-        if (!args.Anchored)
+        _uiSystem.SetUiState(uid, MassCloakConsoleUiKey.Key, new MassCloakConsoleBoundUserInterfaceState()
         {
-            _uiSystem.SetUiState(uid, MassCloakConsoleUiKey.Key, new MassCloakConsoleBoundUserInterfaceState()
-            {
-                MassCloakEnabled = component.MassCloakEnabled,
-                MassCloakRange = component.MassCloakRange,
-                MassCloakMinRange = MassCloakConsoleComponent.MassCloakMinRange,
-                MassCloakMaxRange = MassCloakConsoleComponent.MassCloakMaxRange,
-            });
-        }
-        else
-        {
-            _uiSystem.SetUiState(uid, MassCloakConsoleUiKey.Key, new MassCloakConsoleBoundUserInterfaceState()
-            {
-                MassCloakEnabled = component.MassCloakEnabled,
-                MassCloakRange = component.MassCloakRange,
-                MassCloakMinRange = MassCloakConsoleComponent.MassCloakMinRange,
-                MassCloakMaxRange = MassCloakConsoleComponent.MassCloakMaxRange,
-            });
-        }
+            MassCloakEnabled = component.MassCloakEnabled,
+            MassCloakRange = component.MassCloakRange,
+            MassCloakMinRange = MassCloakConsoleComponent.MassCloakMinRange,
+            MassCloakMaxRange = MassCloakConsoleComponent.MassCloakMaxRange,
+        });
     }
 
     public void UpdateInterface(EntityUid console, MassCloakConsoleComponent comp)
