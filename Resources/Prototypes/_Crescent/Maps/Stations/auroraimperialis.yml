@@ -1,7 +1,7 @@
 - type: gameMap
   id: AuroraImperialis
   mapName: 'БМС Aurora Imperialis'
-  mapPath: /Maps/_Rat/Stations/auroraİmperialis.yml # taleryn-version
+  mapPath: /Maps/_Rat/Stations/auroraimperialis.yml # taleryn-version
   minPlayers: 0
   stations:
     AuroraImperialis:
@@ -18,7 +18,7 @@
         - type: VesselDesignation
           designation: vessel-designation-headquarters
         - type: VesselDescription
-          description: Обветшалый корабль-база, в котором размещается последняя сплочённая имперская армия в этой системе.
+          description: Могущественная имперская крепость, являющаяся последним оплотом порядка в системе.
         - type: VesselMusic
           ambientMusicPrototype: CountsmanMusic
         - type: Grammar
@@ -37,7 +37,7 @@
             SurgeonDSM: [ 4, 4 ]
             TemplarDSM: [ 2, 2 ]
             AdvocatusDSM: [ 1, 1 ]
-            CourtierDSM: [ 6, 6 ]
+            CourtierDSM: [ 10, 10 ]
             LaborDSM: [ 1, 1 ]
             WealthDSM: [ 1, 1 ]
             ForemanDSM: [ 3, 3 ]
