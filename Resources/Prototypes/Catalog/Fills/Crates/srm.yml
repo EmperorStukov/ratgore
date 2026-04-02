@@ -13,7 +13,7 @@
   id: CrateSRMBeetleSMG
   parent: CrateGenericSteel
   name: Beetle SMG Shipment
-  description: A shipment containing two Beetle SMGs and four spare magazines, stamped with the emblem of the Hunter's Pride Merchant's Guild.
+  description: A shipment containing two Beetle SMGs and six spare magazines, stamped with the emblem of the Hunter's Pride Merchant's Guild.
   components:
   - type: StorageFill
     contents:
@@ -63,7 +63,7 @@
   id: CrateSRMImperatorIRM
   parent: CrateGenericSteel
   name: IRM AVR-H Imperator Shipment
-  description: A shipment containing a IRM AVR-H Imperator sniper rifle and two magazines, stamped with the emblem of the Hunter's Pride Merchant's Guild.
+  description: A shipment containing a IRM AVR-H Imperator sniper rifle and three magazines, stamped with the emblem of the Hunter's Pride Merchant's Guild.
   components:
   - type: StorageFill
     contents:
