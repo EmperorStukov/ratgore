@@ -866,9 +866,13 @@
       path: /Audio/_Crescent/Weapons/Guns/M16/rifle_gunshot_2.ogg
     selectedMode: FullAuto
     availableModes:
-    - SemiAuto
-    - FullAuto
-    - Burst
+      - SemiAuto
+      - FullAuto
+      - Burst
+    shotsPerBurst: 3
+    burstFireRate: 8
+    burstCooldown: 0.5
+    damageModifier: 0.8
   - type: ItemSlots
     slots:
       gun_magazine:
