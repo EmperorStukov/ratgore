@@ -31,7 +31,7 @@ public sealed class ChatFilterManager
     [Dependency] private readonly IServerNetManager _netManager = default!;
     private readonly Dictionary<NetUserId, Queue<(string Message, TimeSpan Timestamp)>> _messageHistory = new();
     private const int MaxRepeatedMessages = 10;
-    private const int MessageHistorySize = 5;
+    private const int MessageHistorySize = 13;
     private static readonly TimeSpan MessageHistoryTimeout = TimeSpan.FromSeconds(10);
     private static readonly Regex SingleWordRegex = new(@"^(\w+)$", RegexOptions.Compiled);
     private static readonly Regex WordBoundaryRegex = new(@"\b(\w+)\b", RegexOptions.Compiled);
