@@ -864,9 +864,11 @@
     fireRate: 4
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/M16/rifle_gunshot_2.ogg
-    selectedMode: SemiAuto
+    selectedMode: FullAuto
     availableModes:
-      - SemiAuto
+    - SemiAuto
+    - FullAuto
+    - Burst
   - type: ItemSlots
     slots:
       gun_magazine:
