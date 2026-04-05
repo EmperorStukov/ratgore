@@ -460,8 +460,9 @@
     sprite: _Crescent/Objects/Tools/New_Tools/willyjack.rsi
     state: icon
   - type: Item
-    sprite: _Crescent/Objects/Tools/New_Tools/willyjack.rsi
-    size: Huge
+    size: Normal
+    shape:
+      - 0,0,1,3
     storedSprite:
       sprite: _Crescent/Objects/Tools/New_Tools/willyjack.rsi
       state: icon
@@ -655,7 +656,7 @@
     state: drill_screw
   - type: Item
     sprite: _Crescent/Objects/Tools/New_Tools/drill.rsi
-    size: Small
+    size: Normal
   - type: Tool
     qualities:
       - Screwing
@@ -823,6 +824,8 @@
   - type: LimitedCharges
     maxCharges: 50
     charges: 50
+  - type: Item
+    size: Huge
   - type: Sprite
     sprite: _Crescent/Objects/Tools/New_Tools/RPD.rsi
   - type: PhysicalComposition
@@ -1000,6 +1003,8 @@
     angle: 45
   - type: Item
     size: Normal
+    shape:
+      - 0,0,1,3
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -1094,7 +1099,6 @@
     - 0,0,2,0
     - 1,1,1,2
     sprite: _Crescent/Objects/Tools/New_Tools/pickaxe.rsi
-    storedRotation: -45
   - type: UseDelay
   - type: StaticPrice
     price: 100
@@ -1283,8 +1287,9 @@
     useSound:
       path: /Audio/Items/drill_hit.ogg
   - type: Item
-    sprite: _Crescent/Objects/Tools/New_Tools/breachingsaw.rsi
-    storedRotation: -90
+    size: Huge
+    shape:
+      - 0,0,3,3
   - type: ToolTileCompatible
   - type: PhysicalComposition
     materialComposition:
@@ -1350,7 +1355,10 @@
   - type: KnockdownOnHit
     duration: 1
   - type: MultiHandedItem
-
+  - type: Item
+    size: Huge
+    shape:
+      - 0,0,3,3
 
 - type: entity
   name: SHI-BA Welder
@@ -1532,6 +1540,9 @@
           False: { visible: false }
   - type: Item
     size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
   - type: ItemToggle
     predictable: false
     soundActivate:
@@ -1828,7 +1839,9 @@
           True: { visible: true }
           False: { visible: false }
   - type: Item
-    size: Huge
+    size: Normal
+    shape:
+      - 0,0,1,3
   - type: ItemToggle
     predictable: false
     soundActivate:
@@ -1864,6 +1877,8 @@
         Blunt: 20
   - type: ItemToggleSize
     activatedSize: Large
+    shape:
+      - 0,0,3,3
   - type: ItemToggleHot
   - type: ComponentToggler
     components:
