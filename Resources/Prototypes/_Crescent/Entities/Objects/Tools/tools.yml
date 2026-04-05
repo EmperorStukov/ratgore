@@ -758,7 +758,7 @@
     charges: 30
   - type: UseDelay
   - type: Sprite
-    sprite: _Crescent/Objects/Tools/New_Tools/rcd.rsi
+    sprite: _Crescent/Objects/Tools/New_Tools/RCD.rsi
     state: icon
   - type: Item
     size: Normal
