@@ -15,6 +15,9 @@
   stations:
     Praetorian:
       stationProto: StandardCrescentVessel
+      gridComponents:
+        - type: MapIcon
+          iconType: Shuttle
       components:
         - type: StationNameSetup
           mapNameTemplate: 'БМС Преторианец {1}'
