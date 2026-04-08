@@ -4,15 +4,7 @@
   description: job-description-board
   playTimeTracker: JobBoardSHI
   ranks:
-    RatRankSHIBoardFirst:
-    - !type:CharacterPlaytimeRequirement
-      tracker: JobBoardSHI
-      min: 180000 # 50 hours
-    RatRankSHIBoardSecond:
-    - !type:CharacterPlaytimeRequirement
-      tracker: JobBoardSHI
-      min: 144000 # 40 hours
-    RatRankSHIBoardThird:
+    RatRankSHIBoardTop:
     - !type:CharacterPlaytimeRequirement
       tracker: JobBoardSHI
       min: 108000 # 30 hours
@@ -89,14 +81,6 @@
   description: job-description-boardhr
   playTimeTracker: JobBoardHRSHI
   ranks:
-    RatRankSHIBoardSecond:
-    - !type:CharacterPlaytimeRequirement
-      tracker: JobBoardHRSHI
-      min: 180000 # 50 hours
-    RatRankSHIBoardThird:
-    - !type:CharacterPlaytimeRequirement
-      tracker: JobBoardHRSHI
-      min: 144000 # 40 hours
     RatRankSHIBoardHigh:
     - !type:CharacterPlaytimeRequirement
       tracker: JobBoardHRSHI

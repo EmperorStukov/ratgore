@@ -3,130 +3,118 @@
 - type: rank
   id: RatRankSHIExecutiveTop
   name: Исполнительный директор
-  prefix: Исп. директор
+  prefix: Сёитии
   paygrade: SHI-E6
 
 - type: rank
   id: RatRankSHIExecutiveHigh
   name: Секториальный директор
-  prefix: Сект. директор
+  prefix: Дзюитии
   paygrade: SHI-E5
 
 - type: rank
   id: RatRankSHIExecutiveLead
   name: Директор
-  prefix: Директор
+  prefix: Сёнии
   paygrade: SHI-E4
 
 - type: rank
   id: RatRankSHIExecutiveSenior
   name: Заместитель директора
-  prefix: Зам. директора
+  prefix: Джичо
   paygrade: SHI-E3
 
 - type: rank
   id: RatRankSHIExecutiveMiddle
   name: Секториальный менеджер
-  prefix: Сект. менеджер
+  prefix: Качо
   paygrade: SHI-E2
 
 - type: rank
   id: RatRankSHIExecutiveJunior
   name: Менеджер
-  prefix: Менеджер
+  prefix: Какаричо
   paygrade: SHI-E1
 
 ## SHI - Board
 - type: rank
-  id: RatRankSHIBoardFirst
+  id: RatRankSHIBoardTop
   name: Главный корпоративный исполнитель
-  prefix: Гл. исполнитель
-  paygrade: SHI-B8
-
-- type: rank
-  id: RatRankSHIBoardSecond
-  name: Руководитель отдела корпорации
-  prefix: Руководитель
-  paygrade: SHI-B7
-
-- type: rank
-  id: RatRankSHIBoardThird
-  name: Заместитель руководителя отдела корпорации
-  prefix: Зам. руковод.
+  prefix: Дзюсии
   paygrade: SHI-B6
 
 - type: rank
   id: RatRankSHIBoardHigh
   name: Супервайзер корпорации
-  prefix: Супервайзер
+  prefix: Хатиигэ
   paygrade: SHI-B5
 
 - type: rank
   id: RatRankSHIBoardLead
   name: Исполнительный специалист корпорации
-  prefix: Исп.-спец.
+  prefix: Рокуигэ
   paygrade: SHI-B4
 
 - type: rank
   id: RatRankSHIBoardSenior
   name: Старший корпоративный исполнитель
-  prefix: Ст. исполнитель
+  prefix: Кё То
   paygrade: SHI-B3
 
 - type: rank
   id: RatRankSHIBoardMiddle
   name: Корпоративный исполнитель
-  prefix: Исполнитель
+  prefix: Ке Ю
   paygrade: SHI-B2
 
 - type: rank
   id: RatRankSHIBoardJunior
   name: Младший корпоративный исполнитель
-  prefix: Мл. исполнитель
+  prefix: Ко Си
   paygrade: SHI-B1
 
 ## SHI - MedTech
 - type: rank
   id: RatRankSHIMedTechLead
   name: Ведущий исследователь корпорации
-  prefix: Вед. иссл.
+  prefix: Дзюдан
   paygrade: SHI-R4
 
 - type: rank
   id: RatRankSHIMedTechHigh
   name: Старший исследователь корпорации
-  prefix: Ст. иссл.
+  prefix: Тэнгэн
   paygrade: SHI-R3
 
 - type: rank
   id: RatRankSHIMedTechMiddle
   name: Исследователь корпорации
-  prefix: Исследователь
+  prefix: Одза
   paygrade: SHI-R2
 
 - type: rank
   id: RatRankSHIMedTechJunior
   name: Младший исследователь корпорации
-  prefix: Мл. иссл.
+  prefix: Госэй
   paygrade: SHI-R1
 
 ## SHI - Workers
 - type: rank
   id: RatRankSHIWorkerLead
   name: Ведущий сотрудник корпорации
-  prefix: Вед. сотрудник
+  prefix: Вакасигара
   paygrade: SHI-W4
 
 - type: rank
   id: RatRankSHIWorkerHigh
   name: Старший сотрудник корпорации
-  prefix: Ст. сотрудник
+  prefix: Вакашу
   paygrade: SHI-W3
 
 - type: rank
   id: RatRankSHIWorkerMiddle
   name: Сотрудник корпорации
-  prefix: Сотрудник
+  prefix: Сятэй
   paygrade: SHI-W2
 
 - type: rank
@@ -139,31 +127,31 @@
 - type: rank
   id: RatRankSHICorpSecChief
   name: Начальник корпоративной службы безопасности
-  prefix: Начальник
-  paygrade: SHI-S6
+  prefix: Кайгун Тюса
+  paygrade: SHI-CS6
 
 - type: rank
   id: RatRankSHICorpSecHigh
   name: Руководитель отдела корпоративной службы безопасности
-  prefix: Рук. отд. охраны
-  paygrade: SHI-S5
+  prefix: Кайгун Тайса
+  paygrade: SHI-CS5
 
 - type: rank
   id: RatRankSHICorpSecLead
   name: Ведущий сотрудник корпоративной службы безопасности
-  prefix: Вед. сотр. охраны
+  prefix: Гунбугён
   paygrade: SHI-CS4
 
 - type: rank
   id: RatRankSHICorpSecSenior
   name: Старший сотрудник корпоративной службы безопасности
-  prefix: Ст. сотр. охраны
+  prefix: Бансё
   paygrade: SHI-CS3
 
 - type: rank
   id: RatRankSHICorpSecMiddle
   name: Сотрудник корпоративной службы безопасности
-  prefix: Сотр. охраны
+  prefix: Сёмё
   paygrade: SHI-CS2
 
 - type: rank
