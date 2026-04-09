@@ -638,8 +638,6 @@
       - MediumMissileHardpointFlatpack
       - SmallMissileHardpointFlatpack
       - SmallEnergyHardpointFlatpack #tap additions, dont know where else to put em
-      - SmallHybridHardpointFlatpack
-      - MediumHybridHardpointFlatpack #tap additions end
       - WeaponTurretSmallMachinegunFlatpack
       - WeaponTurretMediumMachinegunFlatpack
       - WeaponTurretSmallArtilleryFlatpack
