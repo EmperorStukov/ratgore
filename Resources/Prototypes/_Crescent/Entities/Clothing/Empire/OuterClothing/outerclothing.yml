@@ -376,7 +376,7 @@
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandatearmor.rsi
   - type: DegradeableArmor
     armorMaxHealth: 1000
-    armorType: Mettalic
+    armorType: Metallic
     armorRepair: PlasteelPlate
     initialModifiers:
       flatReductions:
