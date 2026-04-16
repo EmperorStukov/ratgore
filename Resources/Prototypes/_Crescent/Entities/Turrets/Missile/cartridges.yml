@@ -115,28 +115,28 @@
   - type: StaticPrice
     price: 100
 
-- type: entity
-  id: Cartridge60mmRocketAdvanced
-  name: SHI 60mm Missile
-  description: Luckily not armed. You think. Reduced payload but fitted with a seeker.
-  parent: MissileBaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - CartridgeAzimuth
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: AzimuthRocketProjectileAdvanced
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/azimuth.rsi
-    layers:
-    - state: azimuthmk2
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 125
+# - type: entity
+#   id: Cartridge60mmRocketAdvanced
+#   name: SHI 60mm Missile
+#   description: Luckily not armed. You think. Reduced payload but fitted with a seeker.
+#   parent: MissileBaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - CartridgeAzimuth
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: AzimuthRocketProjectileAdvanced
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/azimuth.rsi
+#     layers:
+#     - state: azimuthmk2
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 125
 
 #arbalest
 
