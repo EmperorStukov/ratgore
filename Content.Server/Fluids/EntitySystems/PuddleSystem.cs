@@ -40,7 +40,7 @@ namespace Content.Server.Fluids.EntitySystems;
 /// </summary>
 public sealed partial class PuddleSystem : SharedPuddleSystem
 {
-    private const float PuddleAutoDespawnSeconds = 1f * 10f; // Forge-Change
+    private const float PuddleAutoDespawnSeconds = 5f * 60f; // Forge-Change
 
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
