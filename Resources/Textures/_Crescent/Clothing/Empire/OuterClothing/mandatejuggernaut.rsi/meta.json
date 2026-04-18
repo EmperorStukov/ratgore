@@ -1,18 +1,56 @@
 {
   "version": 1,
-  "license": null,
-  "copyright": "Original artwork made by @naelmiros for the Hullrot Project. All rights reserved. Do not copy, use, modify, or redistribute without permission.",
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Edited from tgstation...",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
+      "name": "icon"
+    },
+    {
       "name": "equipped-OUTERCLOTHING",
+      "directions": 4,
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "inhand-left",
       "directions": 4
     },
     {
-      "name": "icon"
+      "name": "inhand-right",
+      "directions": 4
     }
   ]
 }
