@@ -11,7 +11,7 @@
   supervisors: You answer to the interests of the Interdyne Pharmaceuticals company. Organize your employees. Secure stakeholders and profit.
   canBeAntag: false
   requirements:
-    - !type:CharacterSpeciesRequirement
+    #- !type:CharacterSpeciesRequirement
       inverted: true
       species:
         - Voidborn
