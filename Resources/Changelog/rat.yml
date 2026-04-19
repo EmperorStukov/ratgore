@@ -657,5 +657,12 @@ Entries:
     id: 82
     time: '2026-04-13T14:06:04.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/131
+  - author: Ko-mp-otik
+    changes:
+      - type: Tweak
+        message: Обновлён ТК Анвил
+    id: 83
+    time: '2026-04-19T11:39:33.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/141
 Name: Rat
 Order: -1
