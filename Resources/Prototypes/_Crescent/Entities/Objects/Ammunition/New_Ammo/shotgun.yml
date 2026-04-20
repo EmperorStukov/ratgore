@@ -1,7 +1,7 @@
 # 18.5Ga
 
 - type: entity
-  id: CrescentCartridge_18.5Ga
+  id: CrescentCartridge_185Ga
   name: Cartridge (18.5Ga)
   parent: CrescentBaseCartridge
   abstract: False
@@ -10,9 +10,9 @@
     tags:
     - ShellShotgun
     - Cartridge
-    - CrescentCartridge_18.5Ga
+    - CrescentCartridge_185Ga
   - type: CartridgeAmmo
-    proto: CrescentBullet_18.5Ga
+    proto: CrescentBullet_185Ga
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/18.5Ga.rsi
     layers:
@@ -20,7 +20,7 @@
       map: ["enum.AmmoVisualLayers.Base"]
 
 - type: entity
-  id: CrescentBullet_18.5Ga
+  id: CrescentBullet_185Ga
   name: bullet (18.5Ga)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -33,27 +33,27 @@
     stoppingPower: 4
 
 - type: entity
-  id: Crescent18.5gPelletShotgunSpread
+  id: Crescent185gPelletShotgunSpread
   categories: [ HideSpawnMenu ]
-  parent: CrescentBullet_18.5Ga
+  parent: CrescentBullet_185Ga
   components:
   - type: ProjectileSpread
-    proto: Crescent18.5gPelletShotgun
+    proto: Crescent185gPelletShotgun
     count: 5
     spread: 12.5
 
 - type: entity
   abstract: False
   parent: CrescentBaseAmmoBox
-  id: CrescentAmmoBox_18.5Ga
+  id: CrescentAmmoBox_185Ga
   name: ammunition box (18.5Ga)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CrescentCartridge_18.5Ga
-    proto: CrescentCartridge_18.5Ga
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Shotgun.rsi
     layers:
@@ -67,20 +67,20 @@
     zeroVisible: false
 
 - type: entity
-  id: CrescentMagazine_18.5Ga
+  id: CrescentMagazine_185Ga
   name: "10-round magazine (18.5Ga)"
   parent: CrescentBaseMagazine
   abstract: False
   components:
   - type: Tag
     tags:
-      - Magazine_18.5Ga
+      - Magazine_185Ga
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CrescentCartridge_18.5Ga
-    proto: CrescentCartridge_18.5Ga
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
     capacity: 5
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5Ga_Mag.rsi
@@ -95,20 +95,20 @@
     zeroVisible: false
 
 - type: entity
-  id: CrescentBoxMagazine18.5Ga
+  id: CrescentBoxMagazine185Ga
   name: "20-round magazine (18.5Ga)"
   parent: CrescentBaseMagazine
   abstract: False
   components:
   - type: Tag
     tags:
-      - BoxMagazine18.5Ga
+      - BoxMagazine185Ga
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CrescentCartridge_18.5Ga
-    proto: CrescentCartridge_18.5Ga
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
     capacity: 20
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5Ga_Drum.rsi
@@ -123,7 +123,7 @@
     zeroVisible: false
 
 - type: entity
-  id: CrescentSpeedLoader18.5Ga
+  id: CrescentSpeedLoader185Ga
   name: "Speedloader (18.5Ga)"
   parent: CrescentBaseMagazine
   abstract: False
@@ -131,13 +131,13 @@
   - type: SpeedLoader
   - type: Tag
     tags:
-      - SpeedLoader_18.5Ga
+      - SpeedLoader_185Ga
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CrescentCartridge_18.5Ga
-    proto: CrescentCartridge_18.5Ga
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
     capacity: 4
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5Ga_SpdLdr.rsi

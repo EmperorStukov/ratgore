@@ -41,6 +41,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.50
     proto: CrescentCartridge_.50
   - type: Sprite
@@ -68,6 +69,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.50
     proto: CrescentCartridge_.50
     capacity: 7
@@ -126,6 +128,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.42
     proto: CrescentCartridge_.42
   - type: Sprite
@@ -153,6 +156,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.42
     proto: CrescentCartridge_.42
     capacity: 7
@@ -176,11 +180,12 @@
   components:
   - type: Tag
     tags:
-      - Magazine_.42
+      - SMGMagazine_.42
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.42
     proto: CrescentCartridge_.42
     capacity: 20
@@ -210,6 +215,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.42
     proto: CrescentCartridge_.42
     capacity: 4
@@ -268,6 +274,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.327
     proto: CrescentCartridge_.327
   - type: Sprite
@@ -295,6 +302,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.327
     proto: CrescentCartridge_.327
     capacity: 30
@@ -324,6 +332,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_.327
     proto: CrescentCartridge_.327
     capacity: 4

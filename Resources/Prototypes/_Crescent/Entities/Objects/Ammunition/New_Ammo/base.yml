@@ -27,8 +27,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CrescentCartridge_5.56x45mm
-    proto: CrescentCartridge_5.56x45mm
+        - CrescentCartridge_556x45mm
+    proto: CrescentCartridge_556x45mm
     capacity: 60
   - type: Item
     size: Small

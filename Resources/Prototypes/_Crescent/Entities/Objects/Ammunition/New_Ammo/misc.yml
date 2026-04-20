@@ -41,6 +41,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_6x24mm
     proto: CrescentCartridge_6x24mm
   - type: Sprite
@@ -68,6 +69,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_6x24mm
     proto: CrescentCartridge_6x24mm
     capacity: 30
@@ -96,6 +98,7 @@
     mayTransfer: true
     whitelist:
       tags:
+        - Cartridge
         - CrescentCartridge_6x24mm
     proto: CrescentCartridge_6x24mm
     capacity: 50
