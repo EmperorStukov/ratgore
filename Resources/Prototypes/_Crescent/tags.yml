@@ -181,6 +181,7 @@
 - type: Tag
   id: CrescentBoxMagazine_127x108
 
+
 - type: Tag
   id: CrescentCartridge_556x45
 - type: Tag
@@ -208,21 +209,21 @@
   id: CrescentMagazine_376
 
 - type: Tag
-  id: CrescentCartridge_185ga
+  id: CrescentCartridge_185Ga
 - type: Tag
-  id: CrescentMagazine_185ga
+  id: CrescentMagazine_185Ga
 - type: Tag
-  id: CrescentBoxMagazine_185ga
+  id: CrescentBoxMagazine_185Ga
 - type: Tag
-  id: CrescentSpeedLoader_185ga
+  id: CrescentSpeedLoader_185Ga
 
 - type: Tag
-  id: CrescentCartridge_12ga
+  id: CrescentCartridge_12Ga
 - type: Tag
-  id: CrescentMagazine_12ga
+  id: CrescentMagazine_12Ga
 
 - type: Tag
-  id: CrescentCartridge_4ga
+  id: CrescentCartridge_4Ga
 
 - type: Tag
   id: CrescentCartridge_762x54
@@ -245,7 +246,7 @@
 - type: Tag
   id: CrescentMagazine_127x55
 - type: Tag
-  id: CrescentSpeedLoader_ 127x55
+  id: CrescentSpeedLoader_127x55
 
 - type: Tag
   id: CrescentCartridge_277

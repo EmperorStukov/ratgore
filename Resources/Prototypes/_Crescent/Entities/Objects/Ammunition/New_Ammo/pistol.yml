@@ -93,7 +93,7 @@
   components:
   - type: Tag
     tags:
-      - Magazine_762x25
+      - CrescentSMGMagazine_762x25
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -238,7 +238,7 @@
   components:
   - type: Tag
     tags:
-      - BoxMagazine_46x30
+      - CrescentBoxMagazine_46x30
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:

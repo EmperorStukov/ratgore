@@ -33,12 +33,12 @@
     stoppingPower: 4
 
 - type: entity
-  id: Crescent185gPelletShotgunSpread
+  id: Crescent185gaPelletShotgunSpread
   categories: [ HideSpawnMenu ]
   parent: CrescentBullet_185Ga
   components:
   - type: ProjectileSpread
-    proto: Crescent185gPelletShotgun
+    proto: CrescentBullet_185Ga
     count: 5
     spread: 12.5
 
@@ -102,7 +102,7 @@
   components:
   - type: Tag
     tags:
-      - CrescentBoxMagazine185Ga
+      - CrescentBoxMagazine_185Ga
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
