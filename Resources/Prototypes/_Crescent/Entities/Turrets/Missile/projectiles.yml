@@ -374,7 +374,7 @@
         Structural: 500
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 16 #2480
+    lifetime: 13.14 #2496m at 190 m/s (match ArbalestRocketProjectile)
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -443,7 +443,7 @@
         Structural: 750
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 16 #2480
+    lifetime: 13.14 #2496m at 190 m/s (match ArbalestRocketProjectile)
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -583,7 +583,7 @@
         Structural: 1000
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 40 #2040m
+    lifetime: 19.49 #3996m at 205 m/s (match ProjectileGargoyle)
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
