@@ -695,5 +695,12 @@ Entries:
     id: 86
     time: '2026-04-22T12:08:05.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/143
+  - author: Aleksandr_Belov
+    changes:
+      - type: Fix
+        message: Добавлен гравген на шаттл "Judge" Глисс-Санто
+    id: 87
+    time: '2026-04-24T02:59:14.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/149
 Name: Rat
 Order: -1
