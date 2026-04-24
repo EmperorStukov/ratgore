@@ -1,5 +1,5 @@
 ent-ClothingOuterHardsuitImperialWorker = имперский рабочий скафандр
-    .desc = Модульный рабочий скафандр в цветах кайзера и дома Оливир.
+    .desc = Модульный рабочий скафандр в цветах кайзера и дома Оливир.К
 ent-ClothingOuterHardsuitInspector = боевой скафандр mk. IV «ORATEUR»
     .desc = Модульный боевой скафандр для корпуса соблюдения Адвокати. В цветах администрации кайзера.
 ent-ClothingOuterHardsuitClarizianWorker = кларизский ремонтный скафандр
