@@ -15435,7 +15435,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 21.511517,-25.536291
       parent: 1
-- proto: Cartridge95mmRocketGSC
+- proto: Cartridge95mmRocket
   entities:
   - uid: 1525
     components:
@@ -22337,7 +22337,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine35mmHE
+- proto: Magazine35mm
   entities:
   - uid: 1874
     components:
@@ -22669,7 +22669,7 @@ entities:
     - type: Transform
       pos: 22.542213,-21.408848
       parent: 1
-- proto: Magazine48mmRocketGorlex
+- proto: Magazine48mmRocket
   entities:
   - uid: 1460
     components:
@@ -23030,8 +23030,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine50mmHE
-  entities:
   - uid: 1842
     components:
     - type: Transform
@@ -23102,8 +23100,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine50mmSAPHE
-  entities:
   - uid: 1853
     components:
     - type: Transform
@@ -23244,7 +23240,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine60mmGorlex
+- proto: Magazine60mm
   entities:
   - uid: 1503
     components:
