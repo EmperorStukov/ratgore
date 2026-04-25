@@ -294,7 +294,7 @@
   - type: StaticPrice
     price: 5000
   - type: ClothingAddFaction
-    faction: DSM
+    faction: KNC
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -330,7 +330,7 @@
   - type: StaticPrice
     price: 5000
   - type: ClothingAddFaction
-    faction: DSM
+    faction: KNC
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -366,7 +366,7 @@
   - type: StaticPrice
     price: 5000
   - type: ClothingAddFaction
-    faction: DSM
+    faction: KNC
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -402,7 +402,7 @@
   - type: StaticPrice
     price: 5000
   - type: ClothingAddFaction
-    faction: DSM
+    faction: KNC
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -438,7 +438,7 @@
   - type: StaticPrice
     price: 5000
   - type: ClothingAddFaction
-    faction: DSM
+    faction: KNC
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -474,4 +474,4 @@
   - type: StaticPrice
     price: 5000
   - type: ClothingAddFaction
-    faction: DSM
+    faction: KNC
